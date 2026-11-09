@@ -285,19 +285,19 @@ h1,h2{font-weight:300 !important}h3{font-weight:400 !important}
 .knews .im{transition:transform .8s ease}.knews:hover .im{transform:scale(1.04)}
 @media (prefers-reduced-motion:reduce){.kh-media>span,.kh-rot-in{animation:none !important}}
 
-.kst{position:relative;width:min(100%,600px);aspect-ratio:1;margin:0 auto}
-.kst-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.kst-ring{transform-origin:300px 300px;animation:kstSpin 90s linear infinite}
-@keyframes kstSpin{to{transform:rotate(360deg)}}
-.kray{opacity:.28;transform-origin:300px 300px;transition:opacity .35s ease,transform .45s cubic-bezier(.2,.8,.2,1)}
-.kst.on-0 .kray-0{opacity:1;transform:scale(1.04)}.kst.on-1 .kray-1{opacity:1;transform:scale(1.04)}.kst.on-2 .kray-2{opacity:1;transform:scale(1.04)}.kst.on-3 .kray-3{opacity:1;transform:scale(1.04)}.kst.on-4 .kray-4{opacity:1;transform:scale(1.04)}.kst.on-5 .kray-5{opacity:1;transform:scale(1.04)}.kst.on-6 .kray-6{opacity:1;transform:scale(1.04)}.kst.on-7 .kray-7{opacity:1;transform:scale(1.04)}.kst.on-8 .kray-8{opacity:1;transform:scale(1.04)}.kst.on-9 .kray-9{opacity:1;transform:scale(1.04)}
-.kst-mark{position:absolute;left:50%;top:50%;width:15%;height:auto;transform:translate(-50%,-50%)}
-.kst-node{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;border:0;padding:0;background:transparent;cursor:pointer;font-family:'Jost',sans-serif}
-.kst-dot{width:clamp(48px,9vw,78px);aspect-ratio:1;border-radius:50%;display:block;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease}
-.kst-node:hover .kst-dot,.kst-node[aria-pressed="true"] .kst-dot{transform:scale(1.12)}
-.kst-lbl{font-size:clamp(11px,1.1vw,14px);font-weight:500;color:var(--navy);white-space:nowrap;background:rgba(255,255,255,.85);padding:1px 6px}
-@media (max-width:520px){.kst-lbl{display:none}}
-@media (prefers-reduced-motion:reduce){.kst-ring{animation:none}}
+.kgx-sec{position:relative;overflow:hidden;background:radial-gradient(ellipse 70% 80% at 64% 50%,#0E2C52 0%,#081C36 45%,#040E1E 100%);color:#FFFFFF}
+.kgx-cv{position:absolute;inset:0;width:100%;height:100%;display:block}
+.kgx-wrap{position:relative;max-width:1320px;margin:0 auto;padding:clamp(72px,9vw,120px) clamp(20px,4vw,48px);display:grid;grid-template-columns:minmax(280px,400px) 1fr;gap:32px;align-items:center;min-height:min(84vh,760px);box-sizing:border-box}
+.kgx-card{margin-top:28px;padding:22px 22px 24px;background:rgba(6,20,38,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.12);border-top-width:3px}
+.kgx{position:relative;height:min(64vh,560px)}
+.kgx-core{position:absolute;left:50%;top:50%;width:clamp(70px,8vw,104px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px 12px rgba(255,236,170,.45),0 0 120px 40px rgba(244,179,51,.18);z-index:20}
+.kgx-core img{width:68%;height:auto}
+.kgx-node{position:absolute;left:0;top:0;display:flex;flex-direction:column;align-items:center;gap:6px;border:0;padding:0;background:transparent;cursor:pointer;font-family:'Jost',sans-serif;will-change:transform;transition:opacity .3s ease}
+.kgx-dot{width:clamp(44px,5vw,64px);aspect-ratio:1;border-radius:50%;display:block;transition:box-shadow .3s ease,transform .3s ease}
+.kgx-node:hover .kgx-dot,.kgx-node[aria-pressed="true"] .kgx-dot{transform:scale(1.15)}
+.kgx-lbl{font-size:13px;font-weight:500;color:#FFFFFF;white-space:nowrap;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.kgx-node:focus-visible{outline:2px solid #F4B333;outline-offset:6px;border-radius:50%}
+@media (max-width:860px){.kgx-wrap{grid-template-columns:1fr}.kgx{order:-1;height:400px;margin:0 -20px}.kgx-lbl{font-size:11px}}
 </style>
 </helmet>
 
@@ -351,24 +351,24 @@ h1,h2{font-weight:300 !important}h3{font-weight:400 !important}
 </div>
 </section>
 
-<!-- SECTOR STAR: Melstacorp mark at the centre, ten sectors radiating out -->
-<section id="sectors" style="border-top: 1px solid var(--line)">
-<div style="max-width: 1320px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(32px, 5vw, 72px); align-items: center">
-<div class="kst-side">
-<div style="font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: var(--muted2)">OUR SECTORS</div>
-<h2 style="margin: 14px 0 0; font-family: 'Jost', sans-serif; font-weight: 300; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.02; letter-spacing: -0.02em">Ten sectors.<br>One Group.</h2>
-<div class="kst-card" style="margin-top: 32px; border-top: 3px solid {{star.c}}; padding-top: 22px">
-<div style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: var(--muted2)">{{star.no}} / 10</div>
-<div style="margin-top: 8px; font-family: 'Jost', sans-serif; font-size: clamp(28px, 3vw, 38px); font-weight: 400; letter-spacing: -0.01em; color: var(--navy)">{{star.name}}</div>
-<p style="margin: 8px 0 0; font-size: 17px; color: var(--muted)">{{star.desc}}</p>
-<ul style="margin: 16px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line2)"><sc-for list="{{star.list}}" as="c" hint-placeholder-count="2"><li style="padding: 10px 0; border-bottom: 1px solid var(--line2); font-size: 15px">{{c.n}}</li></sc-for></ul>
-<div style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center"><button onClick="{{star.open}}" style="min-height: 48px; padding: 0 22px; border: 0; border-radius: 2px; background: var(--navy); color: #FFFFFF; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer">Quick view</button><a dc-href="{{star.href}}" style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); border-bottom: 2px solid #F4B333; padding-bottom: 3px">View sector →</a></div>
+<!-- SECTOR GALAXY: ten sectors orbiting the Melstacorp core -->
+<section id="sectors" class="kgx-sec">
+<canvas id="kgx-cv" class="kgx-cv" aria-hidden="true"></canvas>
+<div class="kgx-wrap">
+<div class="kgx-side">
+<div style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; color: rgba(255,255,255,0.7)">OUR SECTORS</div>
+<h2 style="margin: 14px 0 0; font-family: 'Jost', sans-serif; font-weight: 300; font-size: clamp(34px, 4.2vw, 56px); line-height: 1.02; letter-spacing: -0.02em; color: #FFFFFF">Ten sectors.<br>One Group.</h2>
+<div class="kgx-card" style="border-top: 3px solid {{star.c}}">
+<div style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: rgba(255,255,255,0.65)">{{star.no}} / 10</div>
+<div style="margin-top: 8px; font-family: 'Jost', sans-serif; font-size: clamp(28px, 2.8vw, 36px); font-weight: 400; color: #FFFFFF">{{star.name}}</div>
+<p style="margin: 8px 0 0; font-size: 16px; color: rgba(255,255,255,0.8)">{{star.desc}}</p>
+<ul style="margin: 14px 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,0.18)"><sc-for list="{{star.list}}" as="c" hint-placeholder-count="2"><li style="padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.18); font-size: 15px; color: #FFFFFF">{{c.n}}</li></sc-for></ul>
+<div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center"><button onClick="{{star.open}}" style="min-height: 46px; padding: 0 22px; border: 0; border-radius: 2px; background: #F4B333; color: #0A2240; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer">Quick view</button><a dc-href="{{star.href}}" style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FFFFFF; border-bottom: 2px solid #F4B333; padding-bottom: 3px">View sector →</a></div>
 </div>
 </div>
-<div class="{{starCls}}" role="group" aria-label="The ten Melstacorp sectors">
-<svg class="kst-svg" viewBox="0 0 600 600" aria-hidden="true" focusable="false"><circle cx="300" cy="300" r="250" fill="none" stroke="#DCE2EA" stroke-width="1" stroke-dasharray="2 6" class="kst-ring"></circle><circle cx="300" cy="300" r="150" fill="none" stroke="#E3E8EE" stroke-width="1"></circle><polygon class="kray kray-0" points="286.2,245.7 286.4,180.8 300.0,88.0 313.6,180.8 313.8,245.7" fill="#CF202F"></polygon><polygon class="kray kray-1" points="320.7,248.0 359.1,195.6 424.6,128.5 381.1,211.5 343.1,264.2" fill="#F4B333"></polygon><polygon class="kray kray-2" points="347.3,270.1 409.2,250.2 501.6,234.5 417.6,276.1 355.9,296.4" fill="#2E7CC7"></polygon><polygon class="kray kray-3" points="355.9,303.6 417.6,323.9 501.6,365.5 409.2,349.8 347.3,329.9" fill="#4B9D45"></polygon><polygon class="kray kray-4" points="343.1,335.8 381.1,388.5 424.6,471.5 359.1,404.4 320.7,352.0" fill="#CF202F"></polygon><polygon class="kray kray-5" points="313.8,354.3 313.6,419.2 300.0,512.0 286.4,419.2 286.2,354.3" fill="#F4B333"></polygon><polygon class="kray kray-6" points="279.3,352.0 240.9,404.4 175.4,471.5 218.9,388.5 256.9,335.8" fill="#2E7CC7"></polygon><polygon class="kray kray-7" points="252.7,329.9 190.8,349.8 98.4,365.5 182.4,323.9 244.1,303.6" fill="#4B9D45"></polygon><polygon class="kray kray-8" points="244.1,296.4 182.4,276.1 98.4,234.5 190.8,250.2 252.7,270.1" fill="#CF202F"></polygon><polygon class="kray kray-9" points="256.9,264.2 218.9,211.5 175.4,128.5 240.9,195.6 279.3,248.0" fill="#F4B333"></polygon><circle cx="300" cy="300" r="62" fill="#FFFFFF" stroke="#DCE2EA"></circle></svg>
-<img class="kst-mark" src="assets/logo/melstacorp-mark.png" alt="Melstacorp">
-<sc-for list="{{starNodes}}" as="n" hint-placeholder-count="10"><button class="kst-node" onClick="{{n.pick}}" onMouseEnter="{{n.pick}}" onFocus="{{n.pick}}" aria-pressed="{{n.on}}" aria-label="{{n.name}}" style="left: {{n.x}}%; top: {{n.y}}%"><span class="im {{n.im}} kst-dot" style="box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 {{n.ring}}px {{n.c}}"></span><span class="kst-lbl">{{n.name}}</span></button></sc-for>
+<div class="kgx" id="kgx" role="group" aria-label="The ten Melstacorp sectors. Hover or tab to a sector to see it.">
+<span class="kgx-core" aria-hidden="true"><img src="assets/logo/melstacorp-mark.png" alt=""></span>
+<sc-for list="{{starNodes}}" as="n" hint-placeholder-count="10"><button class="kgx-node" data-i="{{n.i}}" onClick="{{n.pick}}" onMouseEnter="{{n.hover}}" onMouseLeave="{{n.leave}}" onFocus="{{n.hover}}" onBlur="{{n.leave}}" aria-pressed="{{n.on}}" aria-label="{{n.name}}"><span class="im {{n.im}} kgx-dot" style="box-shadow: 0 0 0 2px rgba(255,255,255,0.9), 0 0 {{n.glow}}px {{n.c}}"></span><span class="kgx-lbl">{{n.name}}</span></button></sc-for>
 </div>
 </div>
 </section>
@@ -1040,12 +1040,77 @@ class Component extends DCLogic {
       };
       window.requestAnimationFrame(frame);
     }
-    const SPOS = '50.00,8.50;74.39,16.43;89.47,37.18;89.47,62.82;74.39,83.57;50.00,91.50;25.61,83.57;10.53,62.82;10.53,37.18;25.61,16.43'.split(';').map((p) => p.split(',').map(Number));
     const sIdx = this.state.star === undefined ? 0 : this.state.star;
-    const starNodes = AREAS.map((a, i) => ({ name: a.name, im: a.im, c: fillBrand[i % 4], x: SPOS[i][0], y: SPOS[i][1], on: i === sIdx, ring: i === sIdx ? 6 : 0, pick: () => { if (this.state.star !== i) this.setState({ star: i }); } }));
+    const starNodes = AREAS.map((a, i) => ({ i, name: a.name, im: a.im, c: fillBrand[i % 4], on: i === sIdx, glow: i === sIdx ? 26 : 10,
+      pick: () => { this._gxHold = false; if (this.state.star !== i) this.setState({ star: i }); },
+      hover: () => { this._gxHold = true; if (this.state.star !== i) this.setState({ star: i }); },
+      leave: () => { this._gxHold = false; } }));
     const sA = AREAS[sIdx];
     const star = { no: String(sIdx + 1).padStart(2, '0'), name: sA.name, desc: sA.desc, c: fillBrand[sIdx % 4], list: sA.cos.slice(0, 4).map((c) => ({ n: c.n })),
       href: 'businesses.html#s-' + sA.id, open: () => this.setState({ detail: sIdx }) };
+    if (!this._gx && typeof window !== 'undefined' && typeof document !== 'undefined') {
+      this._gx = true;
+      const self = this;
+      const reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+      let seed = 7; const rnd = () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
+      const ARM = [[255, 120, 130], [255, 214, 120], [120, 180, 255], [140, 220, 130]];
+      const P = [];
+      for (let i = 0; i < 1500; i++) {
+        const arm = i % 4, r = Math.pow(rnd(), 0.6), spread = (rnd() - 0.5) * (0.5 + r * 0.9);
+        const c = rnd() < 0.55 ? [255, 255, 255] : ARM[arm];
+        P.push({ r: r, a: arm * Math.PI / 2 + r * 4.6 + spread, s: 0.4 + rnd() * (r < 0.25 ? 2.2 : 1.5), c: c, tw: rnd() * 6.28, al: 0.25 + rnd() * 0.65 });
+      }
+      const DUST = [];
+      for (let i = 0; i < 520; i++) { const arm = i % 4, r = 0.15 + Math.pow(rnd(), 0.8) * 0.85; DUST.push({ r: r, a: arm * Math.PI / 2 + r * 4.6 + (rnd() - 0.5) * 0.45, s: 6 + rnd() * 16, c: ARM[arm] }); }
+      const BG = []; for (let i = 0; i < 260; i++) BG.push({ x: rnd(), y: rnd(), s: rnd() * 1.3 + 0.2, tw: rnd() * 6.28 });
+      let clock = 0, orbit = 0, last = 0;
+      const frame = (now) => {
+        const cv = document.getElementById('kgx-cv'), box = document.getElementById('kgx');
+        if (!cv || !box) { setTimeout(() => window.requestAnimationFrame(frame), 300); return; }
+        const dt = last ? Math.min(now - last, 60) / 1000 : 0.016; last = now;
+        if (!reduce) { clock += dt; if (!self._gxHold) orbit += dt; }
+        const W = cv.clientWidth, H = cv.clientHeight;
+        if (!W || !H) { window.requestAnimationFrame(frame); return; }
+        if (cv.width !== W || cv.height !== H) { cv.width = W; cv.height = H; }
+        const cr = cv.getBoundingClientRect(), br = box.getBoundingClientRect();
+        const cx = br.left - cr.left + br.width / 2, cy = br.top - cr.top + br.height / 2;
+        const RX = Math.min(br.width * (W < 860 ? 0.4 : 0.5), 520), RY = RX * (W < 860 ? 0.78 : 0.42), tilt = W < 860 ? -0.08 : -0.18;
+        const ctx = cv.getContext('2d'); ctx.clearRect(0, 0, W, H);
+        ctx.globalCompositeOperation = 'lighter';
+        for (const b of BG) { ctx.fillStyle = 'rgba(255,255,255,' + (0.25 + 0.25 * Math.sin(clock * 1.3 + b.tw)).toFixed(3) + ')'; ctx.fillRect(b.x * W, b.y * H, b.s, b.s); }
+        const rot = clock * 0.05, ct = Math.cos(tilt), st = Math.sin(tilt);
+        for (const p of P) {
+          const a = p.a + rot * (1.2 - p.r * 0.5), ex = Math.cos(a) * p.r * RX * 1.15, ey = Math.sin(a) * p.r * RY * 1.15;
+          const x = cx + ex * ct - ey * st, y = cy + ex * st + ey * ct;
+          const al = p.al * (0.7 + 0.3 * Math.sin(clock * 2 + p.tw)) * (1 - p.r * 0.45);
+          ctx.fillStyle = 'rgba(' + p.c[0] + ',' + p.c[1] + ',' + p.c[2] + ',' + al.toFixed(3) + ')';
+          ctx.beginPath(); ctx.arc(x, y, p.s, 0, 6.283); ctx.fill();
+        }
+        for (const d of DUST) {
+          const a = d.a + rot * (1.2 - d.r * 0.5), ex = Math.cos(a) * d.r * RX * 1.15, ey = Math.sin(a) * d.r * RY * 1.15;
+          const x = cx + ex * ct - ey * st, y = cy + ex * st + ey * ct, rg = ctx.createRadialGradient(x, y, 0, x, y, d.s);
+          rg.addColorStop(0, 'rgba(' + d.c[0] + ',' + d.c[1] + ',' + d.c[2] + ',0.07)'); rg.addColorStop(1, 'rgba(' + d.c[0] + ',' + d.c[1] + ',' + d.c[2] + ',0)');
+          ctx.fillStyle = rg; ctx.fillRect(x - d.s, y - d.s, d.s * 2, d.s * 2);
+        }
+        const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, RX * 0.55);
+        g.addColorStop(0, 'rgba(255,240,200,0.55)'); g.addColorStop(0.25, 'rgba(244,179,51,0.18)'); g.addColorStop(1, 'rgba(46,124,199,0)');
+        ctx.fillStyle = g; ctx.beginPath(); ctx.ellipse(cx, cy, RX * 0.9, RY * 1.1, tilt, 0, 6.283); ctx.fill();
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.strokeStyle = 'rgba(255,255,255,0.10)'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.ellipse(cx, cy, RX * 0.86, RY * 0.86, tilt, 0, 6.283); ctx.stroke();
+        const nodes = box.querySelectorAll('.kgx-node');
+        nodes.forEach((el) => {
+          const i = +el.getAttribute('data-i'), ph = i * Math.PI * 2 / 10 + orbit * 0.09;
+          const ex = Math.cos(ph) * RX * 0.86, ey = Math.sin(ph) * RY * 0.86;
+          const x = br.width / 2 + ex * ct - ey * st, y = br.height / 2 + ex * st + ey * ct;
+          const depth = (Math.sin(ph) + 1) / 2, sc = 0.72 + 0.4 * depth;
+          el.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px) translate(-50%,-50%) scale(' + sc.toFixed(3) + ')';
+          el.style.zIndex = depth > 0.5 ? 30 : 10; el.style.opacity = (0.55 + 0.45 * depth).toFixed(2);
+        });
+        if (!reduce) window.requestAnimationFrame(frame);
+      };
+      window.requestAnimationFrame(frame);
+    }
     return { ...W, storyOpen: !!this.state.story, openStory: () => { this._ribWas = this._ribPaused; this._ribPaused = true; this.setState({ story: true }); }, closeStory: () => { this._ribPaused = !!this._ribWas; this.setState({ story: false }); }, starNodes, star, starCls: 'kst on-' + sIdx, toggleRib: () => { this._ribPaused = !this._ribPaused; this.setState({ ribP: this._ribPaused }); }, ribPaused: !!this.state.ribP, ribPlaying: !this.state.ribP, ribLabel: this.state.ribP ? 'Play background animation' : 'Pause background animation', nlForm: !this.state.nlOk, nlDone: !!this.state.nlOk, nlErr: !!this.state.nlE, nlEmail: NL, onNl: (e) => this.setState({ nl: e.target.value }), nlSend, panels, storyMiles, spot, spotTabs, enqForm: !this.state.eqDone, enqDone: !!this.state.eqDone, enqErr: !!this.state.eqErr, enqSend, enqWho: EQ.name || '', enqEm: EQ.email || '', enqTopicL: (EQ.topic || 'General enquiries').toLowerCase(), enqName: (e) => setEq('name', e.target.value), enqEmail: (e) => setEq('email', e.target.value), enqMsg: (e) => setEq('msg', e.target.value), enqTopic: (e) => setEq('topic', e.target.value), enqConsent: (e) => setEq('ok', e.target.checked), trOn: !!this.state.tr, trLabel: this.state.tr || '', nav, welcomeOpen: this.state.welcome !== false, skipWelcome: () => this.setState({ welcome: false }), welcomeChoices, themeClass: light ? 't-light' : 't-dark', toggleTheme: () => this.setState({ theme: light ? 'dark' : 'light' }), themeLabel: light ? 'Switch to dark mode' : 'Switch to light mode',
       accent, accentText, tickerLoop, cardsLoop, mqClass: det !== null && det !== undefined ? 'paused' : '', detailOpen: det !== null && det !== undefined, d, areaCount: String(n).padStart(2, '0'), closeDetail: () => this.setState({ detail: null }), prevDetail: () => this.setState({ detail: ((det || 0) - 1 + n) % n }), nextDetail: () => this.setState({ detail: ((det || 0) + 1) % n }), menuOpen: !!this.state.menu, openMenu: () => this.setState({ menu: true }), closeMenu: () => this.setState({ menu: false }), menuLinks, areas, cur, pins, chips, rows, visibleCount: visible.length, filterLabel: f === 'all' ? 'ALL AREAS' : areaShort(f).toUpperCase(),
       hasSel: !!selId, noSel: !selId, sel, selMembers, clearSel: () => this.setState({ sel: null }), stats, chain,
