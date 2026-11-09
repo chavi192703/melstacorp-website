@@ -250,13 +250,13 @@ h1,h2,h3{font-weight:500 !important}
 .lift{transition:box-shadow .3s ease,transform .3s ease}.lift:hover{transform:none !important;box-shadow:0 18px 40px -24px rgba(10,34,64,.35)}
 .rv,.rv-img{animation-duration:.6s !important}
 .pat{display:none !important}
-.kh{position:relative;min-height:min(84vh,800px);display:flex;align-items:flex-end;color:#FFFFFF;overflow:hidden;background:#0A2240}
-.kh-media>span{position:absolute;inset:0;display:block;opacity:0;animation:khFade 28s infinite}
-.kh-media>span:nth-child(1){opacity:1;animation-name:khFirst}
-.kh-media>span:nth-child(2){animation-delay:7s}.kh-media>span:nth-child(3){animation-delay:14s}.kh-media>span:nth-child(4){animation-delay:21s}
-@keyframes khFade{0%{opacity:0}4%{opacity:1}25%{opacity:1}29%{opacity:0}100%{opacity:0}}
-@keyframes khFirst{0%{opacity:1}25%{opacity:1}29%{opacity:0}96%{opacity:0}100%{opacity:1}}
-.kh-media em{position:absolute;right:clamp(20px,4vw,48px);bottom:28px;font-style:normal;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.kh{position:relative;min-height:min(88vh,860px);display:flex;align-items:center;color:#FFFFFF;overflow:hidden;background:#0A2240}
+.kh-media>span{position:absolute;inset:-2%;display:block;animation:khDrift 26s ease-in-out infinite alternate;transform-origin:60% 50%}
+@keyframes khDrift{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.12) translate3d(-1.5%,-1%,0)}}
+.kh-rot{display:block;height:1.2em;overflow:hidden;margin-top:-.08em}
+.kh-rot-in{display:block;animation:khWords 12s cubic-bezier(.7,0,.3,1) infinite}
+.kh-rot-in>span{display:block;height:1.2em;line-height:1.2em}
+@keyframes khWords{0%,20%{transform:translateY(0)}25%,45%{transform:translateY(-1.2em)}50%,70%{transform:translateY(-2.4em)}75%,95%{transform:translateY(-3.6em)}100%{transform:translateY(-4.8em)}}
 .kh-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,20,38,.82) 0%,rgba(6,20,38,.45) 55%,rgba(6,20,38,.1) 100%),linear-gradient(0deg,rgba(6,20,38,.55),rgba(6,20,38,0) 55%)}
 .kh-h{margin:0;font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(46px,7.2vw,104px);line-height:.98;letter-spacing:-.04em}
 .kh-h span{display:block}
@@ -265,7 +265,7 @@ h1,h2,h3{font-weight:500 !important}
 .kcard{display:flex;flex-direction:column;border-top:3px solid var(--navy);padding:26px 4px 6px;gap:12px}
 .kcard:hover .kgo{border-bottom-color:var(--navy)}
 .knews .im{transition:transform .8s ease}.knews:hover .im{transform:scale(1.04)}
-@media (prefers-reduced-motion:reduce){.kh-media>span{animation:none !important;opacity:0}.kh-media>span:nth-child(1){opacity:1}}
+@media (prefers-reduced-motion:reduce){.kh-media>span,.kh-rot-in{animation:none !important}}
 </style>
 </helmet>
 
@@ -305,12 +305,12 @@ h1,h2,h3{font-weight:500 !important}
 
 <!-- HERO: full-bleed photography, one strong message (KKR benchmark) -->
 <section id="top" class="kh">
-<div class="kh-media" aria-hidden="true"><span class="im im-pla"><em>Plantations · Balangoda &amp; Madulsima</em></span><span class="im im-bev"><em>Beverages · DCSL</em></span><span class="im im-tour"><em>Hospitality · Heritance Negombo</em></span><span class="im im-auto"><em>Automobile · BMW Sri Lanka</em></span></div>
+<div class="kh-media" aria-hidden="true"><span class="im im-pla"></span></div>
 <div class="kh-shade" aria-hidden="true"></div>
 <div style="position: relative; width: 100%; max-width: 1320px; margin: 0 auto; padding: clamp(96px, 14vw, 180px) clamp(20px, 4vw, 48px) clamp(64px, 8vw, 104px)">
 <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; color: rgba(255,255,255,0.85)">MELSTACORP PLC · RESPONSIBLE DIVERSITY</div>
-<h1 class="kh-h" style="margin-top: 22px"><span>Pursue excellence.</span><span>Make a difference.</span></h1>
-<p style="margin: 26px 0 0; max-width: 560px; font-size: 19px; color: rgba(255,255,255,0.9)">A diversified, public listed Sri Lankan group creating value across ten sectors that shape everyday life.</p>
+<h1 class="kh-h" style="margin-top: 22px" aria-label="Built on excellence, partnership, performance and responsibility."><span aria-hidden="true">Built on</span><span class="kh-rot" aria-hidden="true"><span class="kh-rot-in"><span>excellence.</span><span>partnership.</span><span>performance.</span><span>responsibility.</span><span>excellence.</span></span></span></h1>
+<p style="margin: 26px 0 0; max-width: 560px; font-size: 19px; color: rgba(255,255,255,0.9)">Pursue excellence. Make a difference. A diversified, public listed Sri Lankan group creating value across ten sectors.</p>
 <div style="margin-top: 34px; display: flex; flex-wrap: wrap; gap: 26px; align-items: center"><a href="about.html#history" class="kh-btn">Our story →</a><a href="businesses.html" class="kh-btn2">Explore our businesses</a></div>
 </div>
 </section>
