@@ -12,7 +12,7 @@
 <x-dc>
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0}
 .t-dark{--bg:#061A2E;--bg2:#08203A;--surface:#0A2441;--hover:#0E2B4B;--ph:#0D2846;--stripe:rgba(255,255,255,0.035);--line:#16324F;--line2:#1D3A5C;--line3:#2C4C72;--line4:#3D5E86;--mapfill:#0F2D4E;--grid:#0D2744;--faint:#1C3C62;--muted:#A9B9CC;--muted2:#8FA3BA;--muted3:#7D93AD;--text2:#CDD8E4;--text:#F5F7FA;--neg:#FF7A82;--nav:rgba(6,26,46,0.88);--ink:#061A2E;--ring:rgba(245,247,250,0.2)}
@@ -82,7 +82,7 @@ a{color:var(--text);text-decoration:none}a:hover{color:var(--text)}
 .ldr-word{position:absolute;left:29.56%;top:0;width:70.44%;height:100%;clip-path:inset(0 100% 0 0);animation:wordIn .85s cubic-bezier(.76,0,.24,1) .9s both}
 .ldr-word img{width:100%;height:auto;display:block}
 @keyframes wordIn{to{clip-path:inset(0 0 0 0)}}
-.ldr-meta{position:absolute;left:clamp(20px,4vw,48px);right:clamp(20px,4vw,48px);bottom:32px;display:flex;align-items:center;gap:18px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:12px;letter-spacing:.1em;color:var(--muted);animation:metaOut .35s ease 1.6s both}
+.ldr-meta{position:absolute;left:clamp(20px,4vw,48px);right:clamp(20px,4vw,48px);bottom:32px;display:flex;align-items:center;gap:18px;font-family:'Jost',sans-serif;font-weight:600;font-size:12px;letter-spacing:.1em;color:var(--muted);animation:metaOut .35s ease 1.6s both}
 @keyframes metaOut{to{opacity:0;transform:translateY(10px)}}
 .ldr-bar{flex:1;height:1px;background:var(--line2);position:relative;overflow:hidden}
 .ldr-bar>span{position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--focus);transform-origin:left;animation:barGrow 1.5s cubic-bezier(.4,0,.2,1) both}
@@ -95,32 +95,33 @@ a{color:var(--text);text-decoration:none}a:hover{color:var(--text)}
 @media (prefers-reduced-motion:reduce){.ldr{display:none}.navlogo{animation:none}}
 
 /* ===== KKR-benchmark restyle: light, institutional, calm ===== */
-.t-light{--bg:#FFFFFF;--bg2:#F4F6F9;--surface:#FFFFFF;--hover:#F1F4F8;--ph:#E8EDF3;--line:#E3E8EE;--line2:#DCE2EA;--line3:#A9B5C4;--line4:#8E9BAD;--text:#0B1F35;--text2:#2A3A4E;--muted:#4A5868;--muted2:#5A6777;--muted3:#5F6C7C;--ink:#FFFFFF;--nav:#FFFFFF;--navy:#0A2240;--focus:#004987}
-body{font-family:'DM Sans','Helvetica Neue',sans-serif}
-h1,h2,h3{font-weight:500 !important}
+.t-light{--bg:#FFFFFF;--bg2:#EEF3F9;--surface:#FFFFFF;--hover:#F1F4F8;--ph:#E8EDF3;--line:#E3E8EE;--line2:#DCE2EA;--line3:#A9B5C4;--line4:#8E9BAD;--text:#0B1F35;--text2:#2A3A4E;--muted:#4A5868;--muted2:#5A6777;--muted3:#5F6C7C;--ink:#FFFFFF;--nav:#FFFFFF;--navy:#0A2240;--focus:#004987}
+body{font-family:'Jost','Helvetica Neue',sans-serif}
+h1,h2{font-weight:300 !important}h3{font-weight:400 !important}
+.stats .sv{font-weight:300 !important;color:#004987;letter-spacing:-.02em !important}.stats .sv span{color:#0A2240 !important}
 .lift{transition:box-shadow .3s ease,transform .3s ease}.lift:hover{transform:none !important;box-shadow:0 18px 40px -24px rgba(10,34,64,.35)}
 .rv,.rv-img{animation-duration:.6s !important}
 .pat{display:none !important}
-.kh{position:relative;min-height:min(80vh,760px);background:#FFFFFF;overflow:hidden;display:flex;align-items:center}
-.kh-rib{position:absolute;left:0;top:0;width:66%;height:100%;animation:khFloat 14s ease-in-out infinite alternate;transform-origin:0 0}
-@keyframes khFloat{from{transform:translate3d(0,0,0) rotate(0)}to{transform:translate3d(-1.2%,1.5%,0) rotate(-1.2deg)}}
+.kh{position:relative;min-height:min(82vh,780px);background:#FFFFFF;overflow:hidden;display:flex;align-items:center}
+.kh-cv{position:absolute;inset:0;width:100%;height:100%;display:block}
 .kh-in{position:relative;width:100%;max-width:1320px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px) clamp(80px,10vw,120px) clamp(20px,12vw,190px)}
-.kh-h{margin:0;font-family:'Inter Tight',sans-serif;font-weight:400 !important;font-size:clamp(54px,9vw,140px);line-height:1;letter-spacing:-.045em;color:#0A2240}
+.kh-h{margin:0;font-family:'Jost',sans-serif;font-weight:300 !important;font-size:clamp(54px,9vw,140px);line-height:1;letter-spacing:-.02em;color:#0A2240}
 .kh-h>span{display:block}
-.kh-rot{display:block;height:1.2em;overflow:hidden;margin-top:-.1em}
-.kh-rot-in{display:block;animation:khWords 12s cubic-bezier(.7,0,.3,1) infinite}
-.kh-rot-in>span{display:block;height:1.2em;line-height:1.2em}
-@keyframes khWords{0%,20%{transform:translateY(0)}25%,45%{transform:translateY(-1.2em)}50%,70%{transform:translateY(-2.4em)}75%,95%{transform:translateY(-3.6em)}100%{transform:translateY(-4.8em)}}
-.kh-bar{display:block;margin-top:28px;width:130px;height:3px;background:rgba(0,73,135,.15)}
+.kh-rot{display:grid !important}
+.kh-rot>span{grid-area:1/1;opacity:0;animation:khFade 12s ease-in-out infinite}
+.kh-rot>span:nth-child(2){animation-delay:3s}.kh-rot>span:nth-child(3){animation-delay:6s}.kh-rot>span:nth-child(4){animation-delay:9s}
+@keyframes khFade{0%{opacity:0}5%{opacity:1}20%{opacity:1}25%{opacity:0}100%{opacity:0}}
+.kh-bar{display:block;margin-top:30px;width:130px;height:3px;background:rgba(0,73,135,.15)}
 .kh-bar>span{display:block;height:100%;background:#004987;animation:khBar 3s linear infinite}
 @keyframes khBar{from{width:0}to{width:100%}}
 .kh-story{position:absolute;right:clamp(20px,12vw,250px);top:clamp(60px,12%,120px);width:clamp(150px,17vw,250px);aspect-ratio:1;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#FFFFFF !important;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
 .kh-story .im{position:absolute;inset:0;transition:transform 1.2s ease}
 .kh-story-tint{position:absolute;inset:0;background:rgba(0,73,135,.78)}
-.kh-story-c{position:relative;display:flex;flex-direction:column;align-items:center;gap:12px;font-size:clamp(12px,1.1vw,16px);font-weight:600;letter-spacing:.04em;text-align:center}
+.kh-story-c{position:relative;display:flex;flex-direction:column;align-items:center;gap:12px;font-size:clamp(12px,1.1vw,16px);font-weight:500;letter-spacing:.04em;text-align:center}
 .kh-story:hover{transform:scale(1.04)}.kh-story:hover .im{transform:scale(1.12)}
-@media (max-width:760px){.kh{min-height:auto;flex-direction:column;align-items:stretch}.kh-rib{width:120%;height:70%;top:auto;bottom:0;opacity:.95}.kh-in{padding:56px 20px 40px}.kh-story{position:relative;right:auto;top:auto;margin:0 20px 56px auto;width:150px}}
-@media (prefers-reduced-motion:reduce){.kh-rib,.kh-rot-in,.kh-bar>span{animation:none !important}.kh-bar>span{width:100%}}
+.kh-pause{position:absolute;right:clamp(20px,4vw,48px);bottom:28px;width:40px;height:40px;border-radius:50%;border:1px solid #A9B5C4;background:rgba(255,255,255,.85);color:#0A2240;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+@media (max-width:760px){.kh{min-height:auto;flex-direction:column;align-items:stretch}.kh-in{padding:56px 20px 40px}.kh-story{position:relative;right:auto;top:auto;margin:0 20px 56px auto;width:150px}.kh-pause{bottom:16px}}
+@media (prefers-reduced-motion:reduce){.kh-rot>span,.kh-bar>span{animation:none !important}.kh-rot>span:first-child{opacity:1}.kh-bar>span{width:100%}}
 .kcard{display:flex;flex-direction:column;border-top:3px solid var(--navy);padding:26px 4px 6px;gap:12px}
 .kcard:hover .kgo{border-bottom-color:var(--navy)}
 .knews .im{transition:transform .8s ease}.knews:hover .im{transform:scale(1.04)}
@@ -128,15 +129,15 @@ h1,h2,h3{font-weight:500 !important}
 </style>
 </helmet>
 
-<div class="{{themeClass}}" style="background: var(--bg); color: var(--text); font-family: 'DM Sans', 'Helvetica Neue', sans-serif; font-size: 17px; line-height: 1.55; overflow: hidden">
+<div class="{{themeClass}}" style="background: var(--bg); color: var(--text); font-family: 'Jost', 'Helvetica Neue', sans-serif; font-size: 17px; line-height: 1.55; overflow: hidden">
 <div class="ldr" aria-hidden="true"><div class="ldr-bg"></div><div class="ldr-logo"><div class="ldr-mark"><img class="seg s1" src="assets/logo/loader-red.png" alt=""><img class="seg s2" src="assets/logo/loader-yellow.png" alt=""><img class="seg s3" src="assets/logo/loader-blue.png" alt=""><img class="seg s4" src="assets/logo/loader-green.png" alt=""></div><span class="ldr-word"><img class="only-dark" src="assets/logo/wordmark-reversed.png" alt=""><img class="only-light" src="assets/logo/wordmark-colour.png" alt=""></span></div><div class="ldr-meta"><span>MELSTACORP PLC</span><span class="ldr-bar"><span></span></span><span class="ldr-count"></span></div></div>
 
 <header style="position: sticky; top: 0; z-index: 20; background: var(--nav); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line)">
 <nav style="max-width: 1320px; margin: 0 auto; padding: 18px clamp(20px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 24px">
-<a href="home.html" style="display: flex; align-items: center; gap: 10px; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.03em">
+<a href="home.html" style="display: flex; align-items: center; gap: 10px; font-family: 'Jost', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.03em">
 <img class="only-dark navlogo" src="assets/logo/melstacorp-horizontal-reversed.png" alt="Melstacorp — Responsible Diversity" style="height: 44px; width: auto; display: block"><img class="only-light navlogo" src="assets/logo/melstacorp-horizontal-colour.png" alt="Melstacorp — Responsible Diversity" style="height: 44px; width: auto; display: block">
 </a>
-<div class="navlinks" style="display: flex; gap: 28px; font-size: 14px; font-family: 'DM Sans', sans-serif; font-weight: 600">
+<div class="navlinks" style="display: flex; gap: 28px; font-size: 14px; font-family: 'Jost', sans-serif; font-weight: 600">
 <a href="#glance">01 Glance</a><a href="#value">02 Value</a><a href="#people">03 People</a><a href="#sectors">04 Sectors</a><a href="#planet">05 Planet</a><a href="#moments">06 Moments</a>
 </div>
 <div style="display: flex; gap: 10px; align-items: center"><a href="#download" style="font-size: 15px; font-weight: 600; padding: 12px 20px; border-radius: 2px; background: {{accent}}; color: var(--ink)">Full report ↓</a></div>
@@ -145,18 +146,18 @@ h1,h2,h3{font-weight:500 !important}
 
 <!-- HERO -->
 <section style="max-width: 1320px; margin: 0 auto; padding: clamp(72px, 10vw, 130px) clamp(20px, 4vw, 48px) 80px; position: relative">
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: flex; gap: 12px; align-items: center">
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: flex; gap: 12px; align-items: center">
 <span style="width: 8px; height: 8px; border-radius: 50%; background: {{accent}}"></span>Integrated Annual Report · FY [2025/26]
 </div>
-<h1 style="margin: 28px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(52px, 9vw, 136px); line-height: 0.92; letter-spacing: -0.045em">The year<br>in <span style="color: {{accentText}}">pictures.</span></h1>
+<h1 style="margin: 28px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(52px, 9vw, 136px); line-height: 0.92; letter-spacing: -0.045em">The year<br>in <span style="color: {{accentText}}">pictures.</span></h1>
 <p style="margin: 36px 0 0; font-size: 20px; color: var(--text2); max-width: 560px">Our annual report, retold in shapes and stories. Scroll through what Melstacorp built, earned and gave back this year.</p>
-<div aria-hidden="true" style="position: absolute; right: clamp(20px, 4vw, 48px); bottom: 60px; font-family: 'Inter Tight', sans-serif; font-size: clamp(120px, 22vw, 320px); font-weight: 700; letter-spacing: -0.06em; line-height: 0.8; color: transparent; -webkit-text-stroke: 1.5px var(--faint)">[26]</div>
+<div aria-hidden="true" style="position: absolute; right: clamp(20px, 4vw, 48px); bottom: 60px; font-family: 'Jost', sans-serif; font-size: clamp(120px, 22vw, 320px); font-weight: 700; letter-spacing: -0.06em; line-height: 0.8; color: transparent; -webkit-text-stroke: 1.5px var(--faint)">[26]</div>
 </section>
 
 <!-- 01 AT A GLANCE -->
 <section id="glance" style="max-width: 1320px; margin: 0 auto; padding: 40px clamp(20px, 4vw, 48px) clamp(80px, 10vw, 130px)">
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)">01 — At a glance</div>
-<h2 class="rv" style="margin: 20px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(36px, 5vw, 64px); line-height: 1; letter-spacing: -0.04em">Scale, drawn to scale.</h2>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)">01 — At a glance</div>
+<h2 class="rv" style="margin: 20px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(36px, 5vw, 64px); line-height: 1; letter-spacing: -0.04em">Scale, drawn to scale.</h2>
 <p style="margin: 16px 0 0; color: var(--muted); max-width: 520px">Each bar is sized against total assets, so you can see the shape of the group at a glance. All figures LKR billion.</p>
 <div style="margin-top: 48px; display: flex; flex-direction: column; gap: 22px">
 <sc-for list="{{bars}}" as="b" hint-placeholder-count="4">
@@ -164,24 +165,24 @@ h1,h2,h3{font-weight:500 !important}
 <span style="font-size: 16px; color: var(--text2)">{{b.l}}</span>
 <div style="display: flex; align-items: center; gap: 16px">
 <div style="height: 64px; width: {{b.w}}; min-width: 64px; border-radius: 2px; background: {{b.fill}}"></div>
-<span style="font-family: 'Inter Tight', sans-serif; font-size: 40px; font-weight: 600; letter-spacing: -0.04em; white-space: nowrap">{{b.v}}</span>
+<span style="font-family: 'Jost', sans-serif; font-size: 40px; font-weight: 600; letter-spacing: -0.04em; white-space: nowrap">{{b.v}}</span>
 </div>
 </div>
 </sc-for>
 </div>
 <div style="margin-top: 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
 <div style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); padding: 28px; display: flex; gap: 24px; align-items: center">
-<div style="width: 112px; height: 112px; border-radius: 50%; border: 3px solid {{accent}}; display: flex; align-items: center; justify-content: center; font-family: 'Inter Tight', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.03em; flex: 0 0 auto">AAA</div>
-<div><div style="font-family: 'Inter Tight', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: -0.02em">AAA(lka)</div><div style="color: var(--muted); font-size: 15px">Fitch national long-term rating — the highest on the scale.</div></div>
+<div style="width: 112px; height: 112px; border-radius: 50%; border: 3px solid {{accent}}; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.03em; flex: 0 0 auto">AAA</div>
+<div><div style="font-family: 'Jost', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: -0.02em">AAA(lka)</div><div style="color: var(--muted); font-size: 15px">Fitch national long-term rating — the highest on the scale.</div></div>
 </div>
 <div style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); padding: 28px">
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted)">YEAR-ON-YEAR</div>
-<div style="margin-top: 12px; font-family: 'Inter Tight', sans-serif; font-size: 44px; font-weight: 600; letter-spacing: -0.04em">[+X%]</div>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted)">YEAR-ON-YEAR</div>
+<div style="margin-top: 12px; font-family: 'Jost', sans-serif; font-size: 44px; font-weight: 600; letter-spacing: -0.04em">[+X%]</div>
 <div style="color: var(--muted); font-size: 15px">Turnover growth vs prior year</div>
 </div>
 <div style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); padding: 28px">
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted)">EARNINGS PER SHARE</div>
-<div style="margin-top: 12px; font-family: 'Inter Tight', sans-serif; font-size: 44px; font-weight: 600; letter-spacing: -0.04em">[LKR X.XX]</div>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted)">EARNINGS PER SHARE</div>
+<div style="margin-top: 12px; font-family: 'Jost', sans-serif; font-size: 44px; font-weight: 600; letter-spacing: -0.04em">[LKR X.XX]</div>
 <div style="color: var(--muted); font-size: 15px">Dividend per share: [LKR X.XX]</div>
 </div>
 </div>
@@ -191,19 +192,19 @@ h1,h2,h3{font-weight:500 !important}
 <section id="value" style="background: {{accent}}; color: var(--ink)">
 <div style="max-width: 1320px; margin: 0 auto; padding: clamp(80px, 10vw, 130px) clamp(20px, 4vw, 48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: center">
 <div>
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase">02 — Value to the nation</div>
-<h2 class="rv" style="margin: 20px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(40px, 6vw, 84px); line-height: 0.95; letter-spacing: -0.045em">For every rupee we earned, nearly three went to Sri Lanka.</h2>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase">02 — Value to the nation</div>
+<h2 class="rv" style="margin: 20px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(40px, 6vw, 84px); line-height: 0.95; letter-spacing: -0.045em">For every rupee we earned, nearly three went to Sri Lanka.</h2>
 <p style="margin: 24px 0 0; font-size: 18px; max-width: 460px">LKR 132 Bn in direct and indirect taxes, against LKR 45 Bn profit before tax — about 2.9× our pre-tax earnings.</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 28px">
 <div>
-<div style="display: flex; justify-content: space-between; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; margin-bottom: 12px"><span>TAXES PAID · 132 Bn</span><span>■ = 3 Bn</span></div>
+<div style="display: flex; justify-content: space-between; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 13px; margin-bottom: 12px"><span>TAXES PAID · 132 Bn</span><span>■ = 3 Bn</span></div>
 <div style="display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 6px">
 <sc-for list="{{taxSq}}" as="t" hint-placeholder-count="44"><span style="aspect-ratio: 1; border-radius: 4px; background: var(--ink); display: block"></span></sc-for>
 </div>
 </div>
 <div>
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; margin-bottom: 12px">PROFIT BEFORE TAX · 45 Bn</div>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 13px; margin-bottom: 12px">PROFIT BEFORE TAX · 45 Bn</div>
 <div style="display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 6px">
 <sc-for list="{{pbtSq}}" as="t" hint-placeholder-count="15"><span style="aspect-ratio: 1; border-radius: 4px; border: 2px solid var(--ink); box-sizing: border-box; display: block"></span></sc-for>
 </div>
@@ -216,12 +217,12 @@ h1,h2,h3{font-weight:500 !important}
 <section id="people" style="max-width: 1320px; margin: 0 auto; padding: clamp(80px, 10vw, 130px) clamp(20px, 4vw, 48px)">
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: center">
 <div>
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)">03 — People</div>
-<h2 class="rv" style="margin: 20px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(36px, 5vw, 64px); line-height: 1; letter-spacing: -0.04em">32,000 people.<br><span style="color: {{accentText}}">One group.</span></h2>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)">03 — People</div>
+<h2 class="rv" style="margin: 20px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(36px, 5vw, 64px); line-height: 1; letter-spacing: -0.04em">32,000 people.<br><span style="color: {{accentText}}">One group.</span></h2>
 <p style="margin: 20px 0 0; color: var(--muted); max-width: 420px">Each figure represents 1,000 colleagues — nurses, planters, engineers, chefs, analysts and more.</p>
 <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 420px">
-<div style="border-top: 1px solid var(--line2); padding-top: 14px"><div style="font-family: 'Inter Tight', sans-serif; font-size: 34px; font-weight: 600; letter-spacing: -0.03em">[X]%</div><div style="font-size: 14px; color: var(--muted)">Women in the workforce</div></div>
-<div style="border-top: 1px solid var(--line2); padding-top: 14px"><div style="font-family: 'Inter Tight', sans-serif; font-size: 34px; font-weight: 600; letter-spacing: -0.03em">[X]</div><div style="font-size: 14px; color: var(--muted)">Training hours per person</div></div>
+<div style="border-top: 1px solid var(--line2); padding-top: 14px"><div style="font-family: 'Jost', sans-serif; font-size: 34px; font-weight: 600; letter-spacing: -0.03em">[X]%</div><div style="font-size: 14px; color: var(--muted)">Women in the workforce</div></div>
+<div style="border-top: 1px solid var(--line2); padding-top: 14px"><div style="font-family: 'Jost', sans-serif; font-size: 34px; font-weight: 600; letter-spacing: -0.03em">[X]</div><div style="font-size: 14px; color: var(--muted)">Training hours per person</div></div>
 </div>
 </div>
 <div style="display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 14px 10px">
@@ -237,8 +238,8 @@ h1,h2,h3{font-weight:500 !important}
 <div style="max-width: 1320px; margin: 0 auto; border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); overflow: hidden; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))">
 <div class="im im-jude" role="img" aria-label="Jude Fernando, Group Chief Executive Officer" style="min-height: 460px"></div>
 <div style="padding: clamp(32px, 5vw, 64px); display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
-<span style="font-family: 'Inter Tight', sans-serif; font-size: 96px; line-height: 0.6; color: {{accentText}}">“</span>
-<p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(26px, 3vw, 38px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.2">[Pull quote from the Group CEO's review — one or two sentences on the year.]</p>
+<span style="font-family: 'Jost', sans-serif; font-size: 96px; line-height: 0.6; color: {{accentText}}">“</span>
+<p style="margin: 0; font-family: 'Jost', sans-serif; font-size: clamp(26px, 3vw, 38px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.2">[Pull quote from the Group CEO's review — one or two sentences on the year.]</p>
 <div><div style="font-weight: 600">Jude Fernando</div><div style="color: var(--muted); font-size: 15px">Group Chief Executive Officer, Melstacorp PLC</div>
 <a href="#download" style="display: inline-block; margin-top: 20px; padding: 14px 22px; border-radius: 2px; border: 1px solid var(--line3); font-size: 15px">Read the full review →</a></div>
 </div>
@@ -247,19 +248,19 @@ h1,h2,h3{font-weight:500 !important}
 
 <!-- 04 SECTOR STORIES -->
 <section id="sectors" style="max-width: 1320px; margin: 0 auto; padding: clamp(80px, 10vw, 130px) clamp(20px, 4vw, 48px)">
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)">04 — Sector stories</div>
-<h2 class="rv" style="margin: 20px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(36px, 5vw, 64px); line-height: 1; letter-spacing: -0.04em">Ten sectors, ten snapshots.</h2>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)">04 — Sector stories</div>
+<h2 class="rv" style="margin: 20px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(36px, 5vw, 64px); line-height: 1; letter-spacing: -0.04em">Ten sectors, ten snapshots.</h2>
 <div style="margin-top: 56px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px">
 <sc-for list="{{stories}}" as="s" hint-placeholder-count="10">
 <div style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); overflow: hidden; display: flex; flex-direction: column">
 <div class="ph im {{s.im}}" style="aspect-ratio: 4 / 3; position: relative">
-<span style="position: absolute; top: 14px; left: 14px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; padding: 6px 10px; border-radius: 2px; background: {{accent}}; color: var(--ink)">{{s.no}} · {{s.name}}</span>
+<span style="position: absolute; top: 14px; left: 14px; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; padding: 6px 10px; border-radius: 2px; background: {{accent}}; color: var(--ink)">{{s.no}} · {{s.name}}</span>
 </div>
 <div style="padding: 22px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
-<p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: 21px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.25">{{s.h}}</p>
+<p style="margin: 0; font-family: 'Jost', sans-serif; font-size: 21px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.25">{{s.h}}</p>
 <div style="margin-top: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; border-top: 1px solid var(--line2); padding-top: 14px">
-<div><div style="font-family: 'Inter Tight', sans-serif; font-size: 22px; font-weight: 600">[LKR __ Bn]</div><div style="font-size: 13px; color: var(--muted2)">Revenue</div></div>
-<div><div style="font-family: 'Inter Tight', sans-serif; font-size: 22px; font-weight: 600">[±__%]</div><div style="font-size: 13px; color: var(--muted2)">vs last year</div></div>
+<div><div style="font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600">[LKR __ Bn]</div><div style="font-size: 13px; color: var(--muted2)">Revenue</div></div>
+<div><div style="font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600">[±__%]</div><div style="font-size: 13px; color: var(--muted2)">vs last year</div></div>
 </div>
 </div>
 </div>
@@ -270,34 +271,34 @@ h1,h2,h3{font-weight:500 !important}
 <!-- 05 PLANET -->
 <section id="planet" style="background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line)">
 <div style="max-width: 1320px; margin: 0 auto; padding: clamp(80px, 10vw, 130px) clamp(20px, 4vw, 48px)">
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)">05 — Land, water &amp; energy</div>
-<h2 class="rv" style="margin: 20px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(36px, 5vw, 64px); line-height: 1; letter-spacing: -0.04em">Rooted in the island.</h2>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)">05 — Land, water &amp; energy</div>
+<h2 class="rv" style="margin: 20px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(36px, 5vw, 64px); line-height: 1; letter-spacing: -0.04em">Rooted in the island.</h2>
 <div style="margin-top: 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px">
 <div style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); padding: 32px; display: flex; flex-direction: column; gap: 24px">
-<span style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted)">PLANTATIONS</span>
+<span style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted)">PLANTATIONS</span>
 <div style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 5px">
 <sc-for list="{{leaves}}" as="l" hint-placeholder-count="20">
 <svg viewBox="0 0 24 24" style="width: 100%; height: auto; color: {{leaf}}" fill="currentColor" aria-hidden="true"><path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"></path></svg>
 </sc-for>
 </div>
-<div><div style="font-family: 'Inter Tight', sans-serif; font-size: 48px; font-weight: 600; letter-spacing: -0.04em; line-height: 1">20,000 ha</div>
+<div><div style="font-family: 'Jost', sans-serif; font-size: 48px; font-weight: 600; letter-spacing: -0.04em; line-height: 1">20,000 ha</div>
 <div style="color: var(--muted); font-size: 15px; margin-top: 8px">of tea estates across Central, Uva and Sabaragamuwa. Each leaf = 1,000 hectares.</div></div>
 </div>
 <div style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); padding: 32px; display: flex; flex-direction: column; gap: 24px">
-<span style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted)">RENEWABLE ENERGY</span>
+<span style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted)">RENEWABLE ENERGY</span>
 <div style="display: flex; gap: 10px; align-items: flex-end; height: 120px">
 <span style="flex: 1; height: 40%; border-radius: 2px; background: {{energy}}"></span>
 <span style="flex: 1; height: 65%; border-radius: 2px; background: {{energy}}"></span>
 <span style="flex: 1; height: 85%; border-radius: 2px; background: {{energy}}"></span>
 <span style="flex: 1; height: 100%; border-radius: 2px; background: {{energy}}"></span>
 </div>
-<div><div style="font-family: 'Inter Tight', sans-serif; font-size: 48px; font-weight: 600; letter-spacing: -0.04em; line-height: 1">4 MW</div>
+<div><div style="font-family: 'Jost', sans-serif; font-size: 48px; font-weight: 600; letter-spacing: -0.04em; line-height: 1">4 MW</div>
 <div style="color: var(--muted); font-size: 15px; margin-top: 8px">of hydropower from Bogo Power, fed into the national grid. One bar per megawatt.</div></div>
 </div>
 <div style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); padding: 32px; display: flex; flex-direction: column; gap: 24px">
-<span style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted)">COMMUNITY</span>
-<div class="ph" style="height: 120px; border-radius: 2px; display: flex; align-items: flex-end; padding: 12px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 11px; color: var(--muted3)">PHOTO — CSR project</div>
-<div><div style="font-family: 'Inter Tight', sans-serif; font-size: 48px; font-weight: 600; letter-spacing: -0.04em; line-height: 1">[LKR __ Mn]</div>
+<span style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted)">COMMUNITY</span>
+<div class="ph" style="height: 120px; border-radius: 2px; display: flex; align-items: flex-end; padding: 12px; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 11px; color: var(--muted3)">PHOTO — CSR project</div>
+<div><div style="font-family: 'Jost', sans-serif; font-size: 48px; font-weight: 600; letter-spacing: -0.04em; line-height: 1">[LKR __ Mn]</div>
 <div style="color: var(--muted); font-size: 15px; margin-top: 8px">invested in community projects this year.</div></div>
 </div>
 </div>
@@ -306,15 +307,15 @@ h1,h2,h3{font-weight:500 !important}
 
 <!-- 06 MOMENTS -->
 <section id="moments" style="max-width: 1320px; margin: 0 auto; padding: clamp(80px, 10vw, 130px) clamp(20px, 4vw, 48px)">
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)">06 — Moments that mattered</div>
-<h2 class="rv" style="margin: 20px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(36px, 5vw, 64px); line-height: 1; letter-spacing: -0.04em">The year, month by month.</h2>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)">06 — Moments that mattered</div>
+<h2 class="rv" style="margin: 20px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(36px, 5vw, 64px); line-height: 1; letter-spacing: -0.04em">The year, month by month.</h2>
 <div style="margin-top: 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; border-top: 2px solid {{accent}}">
 <sc-for list="{{moments}}" as="m" hint-placeholder-count="4">
 <div style="padding: 28px 24px 0 0; position: relative">
 <span style="position: absolute; top: -9px; left: 0; width: 16px; height: 16px; border-radius: 50%; background: {{accent}}"></span>
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; color: {{accentText}}">{{m.d}}</div>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 13px; color: {{accentText}}">{{m.d}}</div>
 <div class="ph im {{m.im}}" style="margin-top: 16px; aspect-ratio: 16 / 10; border-radius: 2px; border: 1px solid var(--line2)"></div>
-<p style="margin: 16px 0 0; font-family: 'Inter Tight', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.25">{{m.t}}</p>
+<p style="margin: 16px 0 0; font-family: 'Jost', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.25">{{m.t}}</p>
 </div>
 </sc-for>
 </div>
@@ -324,13 +325,13 @@ h1,h2,h3{font-weight:500 !important}
 <section id="download" style="padding: 0 clamp(20px, 4vw, 48px) clamp(80px, 10vw, 120px)">
 <div style="max-width: 1320px; margin: 0 auto; border-radius: 2px; background: {{accent}}; color: var(--ink); padding: clamp(36px, 6vw, 80px); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: end">
 <div>
-<h2 class="rv" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(40px, 6vw, 84px); line-height: 0.95; letter-spacing: -0.045em">Want every number?</h2>
+<h2 class="rv" style="margin: 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(40px, 6vw, 84px); line-height: 0.95; letter-spacing: -0.045em">Want every number?</h2>
 <p style="margin: 20px 0 0; font-size: 18px; max-width: 440px">Download the complete integrated annual report, or jump straight to the section you need.</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px">
-<a href="#download" style="display: flex; justify-content: space-between; align-items: center; min-height: 60px; padding: 0 24px; border-radius: 2px; background: var(--bg); color: var(--text); font-weight: 600"><span>Full annual report FY [2025/26]</span><span style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px">PDF · [__ MB]</span></a>
-<a href="#download" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; padding: 0 24px; border-radius: 2px; border: 1px solid var(--ink); color: var(--ink)"><span>Financial statements only</span><span style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px">PDF</span></a>
-<a href="#download" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; padding: 0 24px; border-radius: 2px; border: 1px solid var(--ink); color: var(--ink)"><span>Past reports archive</span><span style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px">→</span></a>
+<a href="#download" style="display: flex; justify-content: space-between; align-items: center; min-height: 60px; padding: 0 24px; border-radius: 2px; background: var(--bg); color: var(--text); font-weight: 600"><span>Full annual report FY [2025/26]</span><span style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px">PDF · [__ MB]</span></a>
+<a href="#download" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; padding: 0 24px; border-radius: 2px; border: 1px solid var(--ink); color: var(--ink)"><span>Financial statements only</span><span style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px">PDF</span></a>
+<a href="#download" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; padding: 0 24px; border-radius: 2px; border: 1px solid var(--ink); color: var(--ink)"><span>Past reports archive</span><span style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px">→</span></a>
 </div>
 </div>
 </section>

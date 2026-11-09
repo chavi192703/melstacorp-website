@@ -12,7 +12,7 @@
 <x-dc>
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0}
 .t-dark{--bg:#061A2E;--bg2:#08203A;--surface:#0A2441;--hover:#0E2B4B;--ph:#0D2846;--stripe:rgba(255,255,255,0.035);--line:#16324F;--line2:#1D3A5C;--line3:#2C4C72;--line4:#3D5E86;--mapfill:#0F2D4E;--grid:#0D2744;--faint:#1C3C62;--muted:#A9B9CC;--muted2:#8FA3BA;--muted3:#7D93AD;--text2:#CDD8E4;--text:#F5F7FA;--neg:#FF7A82;--nav:rgba(6,26,46,0.9);--ink:#061A2E;--ring:rgba(245,247,250,0.2);--focus:#F4B333}
@@ -119,7 +119,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
 .ldr-word{position:absolute;left:29.56%;top:0;width:70.44%;height:100%;clip-path:inset(0 100% 0 0);animation:wordIn .85s cubic-bezier(.76,0,.24,1) .9s both}
 .ldr-word img{width:100%;height:auto;display:block}
 @keyframes wordIn{to{clip-path:inset(0 0 0 0)}}
-.ldr-meta{position:absolute;left:clamp(20px,4vw,48px);right:clamp(20px,4vw,48px);bottom:32px;display:flex;align-items:center;gap:18px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:12px;letter-spacing:.1em;color:var(--muted);animation:metaOut .35s ease 1.6s both}
+.ldr-meta{position:absolute;left:clamp(20px,4vw,48px);right:clamp(20px,4vw,48px);bottom:32px;display:flex;align-items:center;gap:18px;font-family:'Jost',sans-serif;font-weight:600;font-size:12px;letter-spacing:.1em;color:var(--muted);animation:metaOut .35s ease 1.6s both}
 @keyframes metaOut{to{opacity:0;transform:translateY(10px)}}
 .ldr-bar{flex:1;height:1px;background:var(--line2);position:relative;overflow:hidden}
 .ldr-bar>span{position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--focus);transform-origin:left;animation:barGrow 1.5s cubic-bezier(.4,0,.2,1) both}
@@ -173,7 +173,7 @@ section[id],footer[id]{scroll-margin-top:96px}
 .trx-c{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:20px;animation:trCOut .35s ease .82s forwards}
 @keyframes trCOut{to{opacity:0;transform:translate(-50%,-62%)}}
 .trx-mark{position:relative;width:104px;height:104px;animation:markSpin .8s cubic-bezier(.2,.9,.2,1) .08s both}
-.trx-label{font-family:'Inter Tight',sans-serif;font-size:30px;font-weight:600;letter-spacing:-.02em;color:var(--text);white-space:nowrap;clip-path:inset(0 100% 0 0);animation:wordIn .5s cubic-bezier(.76,0,.24,1) .38s both}
+.trx-label{font-family:'Jost',sans-serif;font-size:30px;font-weight:600;letter-spacing:-.02em;color:var(--text);white-space:nowrap;clip-path:inset(0 100% 0 0);animation:wordIn .5s cubic-bezier(.76,0,.24,1) .38s both}
 @media (prefers-reduced-motion:reduce){.trx{display:none}}
 
 /* ===== Mega navigation ===== */
@@ -198,7 +198,7 @@ section[id],footer[id]{scroll-margin-top:96px}
 .rmo *,.rmo *::before,.rmo *::after{animation:none !important;transition:none !important}
 .rmo .ldr{display:none !important}.rmo .navlogo{opacity:1 !important}
 .ulk a{text-decoration:underline !important;text-underline-offset:3px}
-.fab{position:fixed;z-index:50;min-height:52px;border-radius:2px;border:1px solid var(--line3);background:var(--bg);color:var(--text);box-shadow:0 18px 40px -18px rgba(0,0,0,.55);cursor:pointer;display:flex;align-items:center;gap:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;padding:0 18px}
+.fab{position:fixed;z-index:50;min-height:52px;border-radius:2px;border:1px solid var(--line3);background:var(--bg);color:var(--text);box-shadow:0 18px 40px -18px rgba(0,0,0,.55);cursor:pointer;display:flex;align-items:center;gap:10px;font-family:'Jost',sans-serif;font-size:15px;font-weight:600;padding:0 18px}
 .fab-a11y{left:20px;bottom:20px;width:52px;padding:0;justify-content:center}
 .fab-chat{right:20px;bottom:20px}
 .fab-fb{right:20px;bottom:84px;min-height:44px;font-size:14px;font-weight:500}
@@ -223,32 +223,33 @@ section[id],footer[id]{scroll-margin-top:96px}
 .faq summary::-webkit-details-marker{display:none}.faq[open] summary span{transform:rotate(45deg)}.faq summary span{transition:transform .2s ease;font-size:22px}
 
 /* ===== KKR-benchmark restyle: light, institutional, calm ===== */
-.t-light{--bg:#FFFFFF;--bg2:#F4F6F9;--surface:#FFFFFF;--hover:#F1F4F8;--ph:#E8EDF3;--line:#E3E8EE;--line2:#DCE2EA;--line3:#A9B5C4;--line4:#8E9BAD;--text:#0B1F35;--text2:#2A3A4E;--muted:#4A5868;--muted2:#5A6777;--muted3:#5F6C7C;--ink:#FFFFFF;--nav:#FFFFFF;--navy:#0A2240;--focus:#004987}
-body{font-family:'DM Sans','Helvetica Neue',sans-serif}
-h1,h2,h3{font-weight:500 !important}
+.t-light{--bg:#FFFFFF;--bg2:#EEF3F9;--surface:#FFFFFF;--hover:#F1F4F8;--ph:#E8EDF3;--line:#E3E8EE;--line2:#DCE2EA;--line3:#A9B5C4;--line4:#8E9BAD;--text:#0B1F35;--text2:#2A3A4E;--muted:#4A5868;--muted2:#5A6777;--muted3:#5F6C7C;--ink:#FFFFFF;--nav:#FFFFFF;--navy:#0A2240;--focus:#004987}
+body{font-family:'Jost','Helvetica Neue',sans-serif}
+h1,h2{font-weight:300 !important}h3{font-weight:400 !important}
+.stats .sv{font-weight:300 !important;color:#004987;letter-spacing:-.02em !important}.stats .sv span{color:#0A2240 !important}
 .lift{transition:box-shadow .3s ease,transform .3s ease}.lift:hover{transform:none !important;box-shadow:0 18px 40px -24px rgba(10,34,64,.35)}
 .rv,.rv-img{animation-duration:.6s !important}
 .pat{display:none !important}
-.kh{position:relative;min-height:min(80vh,760px);background:#FFFFFF;overflow:hidden;display:flex;align-items:center}
-.kh-rib{position:absolute;left:0;top:0;width:66%;height:100%;animation:khFloat 14s ease-in-out infinite alternate;transform-origin:0 0}
-@keyframes khFloat{from{transform:translate3d(0,0,0) rotate(0)}to{transform:translate3d(-1.2%,1.5%,0) rotate(-1.2deg)}}
+.kh{position:relative;min-height:min(82vh,780px);background:#FFFFFF;overflow:hidden;display:flex;align-items:center}
+.kh-cv{position:absolute;inset:0;width:100%;height:100%;display:block}
 .kh-in{position:relative;width:100%;max-width:1320px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px) clamp(80px,10vw,120px) clamp(20px,12vw,190px)}
-.kh-h{margin:0;font-family:'Inter Tight',sans-serif;font-weight:400 !important;font-size:clamp(54px,9vw,140px);line-height:1;letter-spacing:-.045em;color:#0A2240}
+.kh-h{margin:0;font-family:'Jost',sans-serif;font-weight:300 !important;font-size:clamp(54px,9vw,140px);line-height:1;letter-spacing:-.02em;color:#0A2240}
 .kh-h>span{display:block}
-.kh-rot{display:block;height:1.2em;overflow:hidden;margin-top:-.1em}
-.kh-rot-in{display:block;animation:khWords 12s cubic-bezier(.7,0,.3,1) infinite}
-.kh-rot-in>span{display:block;height:1.2em;line-height:1.2em}
-@keyframes khWords{0%,20%{transform:translateY(0)}25%,45%{transform:translateY(-1.2em)}50%,70%{transform:translateY(-2.4em)}75%,95%{transform:translateY(-3.6em)}100%{transform:translateY(-4.8em)}}
-.kh-bar{display:block;margin-top:28px;width:130px;height:3px;background:rgba(0,73,135,.15)}
+.kh-rot{display:grid !important}
+.kh-rot>span{grid-area:1/1;opacity:0;animation:khFade 12s ease-in-out infinite}
+.kh-rot>span:nth-child(2){animation-delay:3s}.kh-rot>span:nth-child(3){animation-delay:6s}.kh-rot>span:nth-child(4){animation-delay:9s}
+@keyframes khFade{0%{opacity:0}5%{opacity:1}20%{opacity:1}25%{opacity:0}100%{opacity:0}}
+.kh-bar{display:block;margin-top:30px;width:130px;height:3px;background:rgba(0,73,135,.15)}
 .kh-bar>span{display:block;height:100%;background:#004987;animation:khBar 3s linear infinite}
 @keyframes khBar{from{width:0}to{width:100%}}
 .kh-story{position:absolute;right:clamp(20px,12vw,250px);top:clamp(60px,12%,120px);width:clamp(150px,17vw,250px);aspect-ratio:1;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#FFFFFF !important;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
 .kh-story .im{position:absolute;inset:0;transition:transform 1.2s ease}
 .kh-story-tint{position:absolute;inset:0;background:rgba(0,73,135,.78)}
-.kh-story-c{position:relative;display:flex;flex-direction:column;align-items:center;gap:12px;font-size:clamp(12px,1.1vw,16px);font-weight:600;letter-spacing:.04em;text-align:center}
+.kh-story-c{position:relative;display:flex;flex-direction:column;align-items:center;gap:12px;font-size:clamp(12px,1.1vw,16px);font-weight:500;letter-spacing:.04em;text-align:center}
 .kh-story:hover{transform:scale(1.04)}.kh-story:hover .im{transform:scale(1.12)}
-@media (max-width:760px){.kh{min-height:auto;flex-direction:column;align-items:stretch}.kh-rib{width:120%;height:70%;top:auto;bottom:0;opacity:.95}.kh-in{padding:56px 20px 40px}.kh-story{position:relative;right:auto;top:auto;margin:0 20px 56px auto;width:150px}}
-@media (prefers-reduced-motion:reduce){.kh-rib,.kh-rot-in,.kh-bar>span{animation:none !important}.kh-bar>span{width:100%}}
+.kh-pause{position:absolute;right:clamp(20px,4vw,48px);bottom:28px;width:40px;height:40px;border-radius:50%;border:1px solid #A9B5C4;background:rgba(255,255,255,.85);color:#0A2240;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+@media (max-width:760px){.kh{min-height:auto;flex-direction:column;align-items:stretch}.kh-in{padding:56px 20px 40px}.kh-story{position:relative;right:auto;top:auto;margin:0 20px 56px auto;width:150px}.kh-pause{bottom:16px}}
+@media (prefers-reduced-motion:reduce){.kh-rot>span,.kh-bar>span{animation:none !important}.kh-rot>span:first-child{opacity:1}.kh-bar>span{width:100%}}
 .kcard{display:flex;flex-direction:column;border-top:3px solid var(--navy);padding:26px 4px 6px;gap:12px}
 .kcard:hover .kgo{border-bottom-color:var(--navy)}
 .knews .im{transition:transform .8s ease}.knews:hover .im{transform:scale(1.04)}
@@ -256,7 +257,7 @@ h1,h2,h3{font-weight:500 !important}
 </style>
 </helmet>
 
-<div class="{{rootClass}}" style="background: var(--bg); color: var(--text); font-family: 'DM Sans', 'Helvetica Neue', sans-serif; font-size: 18px; line-height: 1.55; overflow: hidden">
+<div class="{{rootClass}}" style="background: var(--bg); color: var(--text); font-family: 'Jost', 'Helvetica Neue', sans-serif; font-size: 18px; line-height: 1.55; overflow: hidden">
 <div class="ldr" aria-hidden="true"><div class="ldr-bg"></div><div class="ldr-logo"><div class="ldr-mark"><img class="seg s1" src="assets/logo/loader-red.png" alt=""><img class="seg s2" src="assets/logo/loader-yellow.png" alt=""><img class="seg s3" src="assets/logo/loader-blue.png" alt=""><img class="seg s4" src="assets/logo/loader-green.png" alt=""></div><span class="ldr-word"><img class="only-dark" src="assets/logo/wordmark-reversed.png" alt=""><img class="only-light" src="assets/logo/wordmark-colour.png" alt=""></span></div><div class="ldr-meta"><span>MELSTACORP PLC</span><span class="ldr-bar"><span></span></span><span class="ldr-count"></span></div></div>
 <div class="ubar" style="background: var(--bg2); border-bottom: 1px solid var(--line); font-size: 13px">
 <div style="max-width: 1320px; margin: 0 auto; padding: 6px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 20px">
@@ -286,20 +287,20 @@ h1,h2,h3{font-weight:500 !important}
 <section id="top" style="position: relative; overflow: hidden; border-bottom: 1px solid var(--line)"><div class="im im-tour" aria-hidden="true" style="position: absolute; inset: 0; opacity: 0.22"></div><div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to right, var(--bg) 35%, transparent)"></div>
 <div style="position: relative; max-width: 1320px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) clamp(20px, 4vw, 48px) clamp(48px, 6vw, 80px)">
 <nav aria-label="Breadcrumb" style="font-size: 14px; color: var(--muted2)"><a href="home.html" style="color: var(--muted2)">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text2)">Our Businesses</span></nav>
-<div style="margin-top: 28px"><div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">OUR BUSINESSES</div>
-</div><h1 style="margin: 18px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(44px, 7vw, 96px); line-height: 0.95; letter-spacing: -0.045em; max-width: 1000px">Many businesses.<br><span style="color: {{accentText}}">One Group.</span></h1>
+<div style="margin-top: 28px"><div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">OUR BUSINESSES</div>
+</div><h1 style="margin: 18px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(44px, 7vw, 96px); line-height: 0.95; letter-spacing: -0.045em; max-width: 1000px">Many businesses.<br><span style="color: {{accentText}}">One Group.</span></h1>
 <p style="margin: 24px 0 0; font-size: 19px; color: var(--text2); max-width: 620px">Ten sectors, the companies inside them, and links to each company’s own website.</p>
 </div>
 </section>
 
 <section id="sectors" style="">
 <div style="max-width: 1320px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px)">
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">SECTORS</div>
-<h2 style="margin: 16px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(36px, 4.8vw, 62px); line-height: 1; letter-spacing: -0.04em">Ten sectors</h2>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">SECTORS</div>
+<h2 style="margin: 16px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(36px, 4.8vw, 62px); line-height: 1; letter-spacing: -0.04em">Ten sectors</h2>
 <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px">
 <sc-for list="{{areaCards}}" as="a" hint-placeholder-count="10">
 <a href="#sector" onClick="{{a.pick}}" class="lift" style="position: relative; display: block; min-height: 230px; border-radius: 2px; overflow: hidden; border: 1px solid var(--line2)"><span class="im {{a.im}}" style="position: absolute; inset: 0; display: block"></span><span class="scrim"></span><span style="position: absolute; left: 0; right: 0; top: 0; height: 5px; background: {{a.c}}; display: block"></span>
-<span style="position: absolute; left: 20px; right: 20px; bottom: 18px; color: #FFFFFF; display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Inter Tight', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: -0.02em">{{a.name}}</span><span style="font-size: 14px; opacity: 0.88">{{a.count}}</span></span></a>
+<span style="position: absolute; left: 20px; right: 20px; bottom: 18px; color: #FFFFFF; display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Jost', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: -0.02em">{{a.name}}</span><span style="font-size: 14px; opacity: 0.88">{{a.count}}</span></span></a>
 </sc-for>
 </div>
 </div>
@@ -310,27 +311,27 @@ h1,h2,h3{font-weight:500 !important}
 <div class="im {{sec.im}}" role="img" aria-label="{{sec.name}}" style="position: relative; min-height: clamp(300px, 38vw, 480px)"><span class="scrim"></span>
 <div style="position: absolute; left: 0; right: 0; bottom: 0; max-width: 1320px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px) clamp(28px, 4vw, 48px); color: #FFFFFF">
 <nav aria-label="Breadcrumb" style="font-size: 14px; color: rgba(255,255,255,0.86)"><a href="home.html" style="color: inherit">Home</a> <span aria-hidden="true">/</span> <a href="#sectors" style="color: inherit">Our Businesses</a> <span aria-hidden="true">/</span> <span>{{sec.name}}</span></nav>
-<h2 style="margin: 10px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(42px, 6.4vw, 88px); line-height: 0.95; letter-spacing: -0.045em">{{sec.name}}</h2>
+<h2 style="margin: 10px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(42px, 6.4vw, 88px); line-height: 0.95; letter-spacing: -0.045em">{{sec.name}}</h2>
 <p style="margin: 10px 0 0; font-size: 19px; max-width: 640px">{{sec.tag}}</p></div></div>
 <div style="max-width: 1320px; margin: 0 auto; padding: 28px clamp(20px, 4vw, 48px) clamp(72px, 9vw, 112px)">
-<div role="group" style="display: flex; flex-wrap: wrap; gap: 8px"><sc-for list="{{secTabs}}" as="s" hint-placeholder-count="10"><button onClick="{{s.pick}}" aria-pressed="{{s.on}}" style="min-height: 44px; padding: 0 16px; border-radius: 2px; border: 1px solid {{s.bd}}; background: {{s.bg}}; color: {{s.fg}}; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer">{{s.label}}</button></sc-for></div>
+<div role="group" style="display: flex; flex-wrap: wrap; gap: 8px"><sc-for list="{{secTabs}}" as="s" hint-placeholder-count="10"><button onClick="{{s.pick}}" aria-pressed="{{s.on}}" style="min-height: 44px; padding: 0 16px; border-radius: 2px; border: 1px solid {{s.bd}}; background: {{s.bg}}; color: {{s.fg}}; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer">{{s.label}}</button></sc-for></div>
 <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: start">
-<div><div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">OVERVIEW</div>
+<div><div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">OVERVIEW</div>
 <p style="margin: 14px 0 0; font-size: 19px; color: var(--text2)">{{sec.ov}}</p>
-<div style="margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px"><sc-for list="{{sec.facts}}" as="f" hint-placeholder-count="2"><div style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); padding: 20px"><div style="font-family: 'Inter Tight', sans-serif; font-size: 30px; font-weight: 600; letter-spacing: -0.03em; line-height: 1">{{f.v}}</div><div style="margin-top: 8px; font-size: 14px; color: var(--muted)">{{f.l}}</div></div></sc-for></div>
-<div style="margin-top: 32px"><div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">QUICK ANSWERS</div></div>
+<div style="margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px"><sc-for list="{{sec.facts}}" as="f" hint-placeholder-count="2"><div style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); padding: 20px"><div style="font-family: 'Jost', sans-serif; font-size: 30px; font-weight: 600; letter-spacing: -0.03em; line-height: 1">{{f.v}}</div><div style="margin-top: 8px; font-size: 14px; color: var(--muted)">{{f.l}}</div></div></sc-for></div>
+<div style="margin-top: 32px"><div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">QUICK ANSWERS</div></div>
 <div style="margin-top: 10px; border-top: 1px solid var(--line2)"><sc-for list="{{sec.faq}}" as="q" hint-placeholder-count="3"><details class="faq" style="border-bottom: 1px solid var(--line2)"><summary style="min-height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 12px; cursor: pointer; font-weight: 600; font-size: 16px; list-style: none">{{q.q}}<span aria-hidden="true" style="color: {{accentText}}">+</span></summary><p style="margin: 0 0 16px; color: var(--text2); font-size: 15px">{{q.a}}</p></details></sc-for></div>
-<div style="margin-top: 32px"><div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">RELATED NEWS</div></div>
-<div style="margin-top: 10px; border-top: 1px solid var(--line2)"><sc-for list="{{sec.news}}" as="n" hint-placeholder-count="2"><a href="media.html#news" class="row" style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 4px; border-bottom: 1px solid var(--line2); font-size: 16px"><span>{{n.t}}</span><span style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted2); white-space: nowrap">{{n.d}}</span></a></sc-for>
+<div style="margin-top: 32px"><div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">RELATED NEWS</div></div>
+<div style="margin-top: 10px; border-top: 1px solid var(--line2)"><sc-for list="{{sec.news}}" as="n" hint-placeholder-count="2"><a href="media.html#news" class="row" style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 4px; border-bottom: 1px solid var(--line2); font-size: 16px"><span>{{n.t}}</span><span style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted2); white-space: nowrap">{{n.d}}</span></a></sc-for>
 <sc-if value="{{sec.noNews}}" hint-placeholder-val="{{ false }}"><p style="margin: 12px 0 0; font-size: 15px; color: var(--muted)">No recent announcements for this sector. <a href="media.html#news" style="text-decoration: underline">See all Group news</a></p></sc-if></div>
 </div>
-<div><div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">COMPANIES IN THIS SECTOR</div>
+<div><div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">COMPANIES IN THIS SECTOR</div>
 <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 10px"><sc-for list="{{sec.cos}}" as="co" hint-placeholder-count="3"><div style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); display: flex; align-items: center; gap: 16px; padding: 12px 14px 12px 12px">
 <button onClick="{{co.open}}" aria-label="Open profile: {{co.n}}" class="{{co.vis}}" style="width: 96px; height: 64px; flex: 0 0 auto; border-radius: 2px; border: 1px solid var(--line2); cursor: pointer; display: block; position: relative; padding: 6px 8px"></button>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><button onClick="{{co.open}}" style="all: unset; cursor: pointer; font-weight: 600; font-size: 16px">{{co.n}}</button><span style="font-size: 13px; color: var(--muted2)">{{co.act}}</span></span>
 <sc-if value="{{co.hasWeb}}" hint-placeholder-val="{{ true }}"><a dc-href="{{co.web}}" target="_blank" rel="noopener" aria-label="Visit {{co.n}} website" style="width: 44px; height: 44px; flex: 0 0 auto; border-radius: 50%; border: 1px solid var(--line3); display: flex; align-items: center; justify-content: center; color: {{accentText}}">↗</a></sc-if>
 </div></sc-for></div>
-<div style="margin-top: 24px; display: flex; gap: 10px"><button onClick="{{prevSec}}" style="flex: 1; min-height: 48px; border-radius: 2px; border: 1px solid var(--line3); background: transparent; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 15px; cursor: pointer">← {{sec.prev}}</button><button onClick="{{nextSec}}" style="flex: 1; min-height: 48px; border-radius: 2px; border: 1px solid var(--line3); background: transparent; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 15px; cursor: pointer">{{sec.next}} →</button></div>
+<div style="margin-top: 24px; display: flex; gap: 10px"><button onClick="{{prevSec}}" style="flex: 1; min-height: 48px; border-radius: 2px; border: 1px solid var(--line3); background: transparent; color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; cursor: pointer">← {{sec.prev}}</button><button onClick="{{nextSec}}" style="flex: 1; min-height: 48px; border-radius: 2px; border: 1px solid var(--line3); background: transparent; color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; cursor: pointer">{{sec.next}} →</button></div>
 </div>
 </div>
 </div>
@@ -338,17 +339,17 @@ h1,h2,h3{font-weight:500 !important}
 
 <section id="directory" style="background: var(--bg2); border-top: 1px solid var(--line)">
 <div style="max-width: 1320px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px)">
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">GROUP COMPANIES DIRECTORY</div>
-<h2 style="margin: 16px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(36px, 4.8vw, 62px); line-height: 1; letter-spacing: -0.04em">Find a Group company</h2>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">GROUP COMPANIES DIRECTORY</div>
+<h2 style="margin: 16px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(36px, 4.8vw, 62px); line-height: 1; letter-spacing: -0.04em">Find a Group company</h2>
 <p style="margin: 16px 0 0; max-width: 620px; color: var(--muted)">Filter by sector or search by name, activity or place. Open a profile for an overview and a link to the company’s own website.</p>
-<label style="margin-top: 28px; max-width: 560px; min-height: 52px; display: flex; align-items: center; gap: 10px; padding: 0 18px; border-radius: 2px; border: 1px solid var(--line3); background: var(--surface)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg><input type="search" value="{{dq}}" onInput="{{onDirQ}}" placeholder="Search companies" aria-label="Search Group companies" style="flex: 1; min-height: 48px; border: 0; outline: none; background: transparent; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px"></label>
-<div style="margin-top: 16px"><div role="group" style="display: flex; flex-wrap: wrap; gap: 8px"><sc-for list="{{dSecChips}}" as="s" hint-placeholder-count="11"><button onClick="{{s.pick}}" aria-pressed="{{s.on}}" style="min-height: 44px; padding: 0 16px; border-radius: 2px; border: 1px solid {{s.bd}}; background: {{s.bg}}; color: {{s.fg}}; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer">{{s.label}}</button></sc-for></div></div>
-<div style="margin-top: 22px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted2)">{{dirCount}}</div>
+<label style="margin-top: 28px; max-width: 560px; min-height: 52px; display: flex; align-items: center; gap: 10px; padding: 0 18px; border-radius: 2px; border: 1px solid var(--line3); background: var(--surface)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg><input type="search" value="{{dq}}" onInput="{{onDirQ}}" placeholder="Search companies" aria-label="Search Group companies" style="flex: 1; min-height: 48px; border: 0; outline: none; background: transparent; color: var(--text); font-family: 'Jost', sans-serif; font-size: 16px"></label>
+<div style="margin-top: 16px"><div role="group" style="display: flex; flex-wrap: wrap; gap: 8px"><sc-for list="{{dSecChips}}" as="s" hint-placeholder-count="11"><button onClick="{{s.pick}}" aria-pressed="{{s.on}}" style="min-height: 44px; padding: 0 16px; border-radius: 2px; border: 1px solid {{s.bd}}; background: {{s.bg}}; color: {{s.fg}}; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer">{{s.label}}</button></sc-for></div></div>
+<div style="margin-top: 22px; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted2)">{{dirCount}}</div>
 <div style="margin-top: 14px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px">
 <sc-for list="{{dirList}}" as="co" hint-placeholder-count="9"><div class="lift" style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); overflow: hidden; display: flex; flex-direction: column">
 <button onClick="{{co.open}}" aria-label="Open profile: {{co.n}}" class="{{co.vis}}" style="height: 128px; border: 0; border-bottom: 1px solid var(--line2); cursor: pointer; display: block; position: relative; width: 100%"><span style="position: absolute; left: 0; right: 0; top: 0; height: 4px; background: {{co.c}}; display: block"></span></button>
-<div style="padding: 18px; display: flex; flex-direction: column; gap: 6px; flex: 1"><span style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.08em; color: var(--muted2)">{{co.secName}}</span>
-<span style="font-family: 'Inter Tight', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2">{{co.n}}</span><span style="font-size: 14px; color: var(--muted)">{{co.act}}</span>
+<div style="padding: 18px; display: flex; flex-direction: column; gap: 6px; flex: 1"><span style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.08em; color: var(--muted2)">{{co.secName}}</span>
+<span style="font-family: 'Jost', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2">{{co.n}}</span><span style="font-size: 14px; color: var(--muted)">{{co.act}}</span>
 <span style="margin-top: auto; padding-top: 10px; display: flex; gap: 16px; align-items: center"><button onClick="{{co.open}}" style="all: unset; cursor: pointer; font-weight: 600; font-size: 14px; color: {{accentText}}">Profile →</button><sc-if value="{{co.hasWeb}}" hint-placeholder-val="{{ true }}"><a dc-href="{{co.web}}" target="_blank" rel="noopener" style="font-size: 14px; color: var(--text2)">Website ↗</a></sc-if></span></div></div></sc-for>
 </div>
 <sc-if value="{{dirEmpty}}" hint-placeholder-val="{{ false }}"><p style="margin: 20px 0 0; color: var(--muted)">No companies match. Try another sector or search term.</p></sc-if>
@@ -358,15 +359,15 @@ h1,h2,h3{font-weight:500 !important}
 
 <section id="structure" style="border-top: 1px solid var(--line)">
 <div style="max-width: 1320px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px)">
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">GROUP STRUCTURE</div>
-<h2 style="margin: 16px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(36px, 4.8vw, 62px); line-height: 1; letter-spacing: -0.04em">How the Group fits together</h2>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">GROUP STRUCTURE</div>
+<h2 style="margin: 16px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(36px, 4.8vw, 62px); line-height: 1; letter-spacing: -0.04em">How the Group fits together</h2>
 <p style="margin: 16px 0 0; font-size: 15px; color: var(--muted2)">Select a company to open its profile.</p>
 <div class="rv" style="margin-top: 32px; display: flex; flex-direction: column; align-items: center">
-<div style="padding: 16px 28px; border-radius: 2px; background: {{accent}}; color: var(--ink); font-family: 'Inter Tight', sans-serif; font-size: 22px; font-weight: 600; text-align: center">Melstacorp PLC<span style="display: block; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 11px; font-weight: 500; margin-top: 2px">LISTED HOLDING COMPANY · CSE</span></div>
+<div style="padding: 16px 28px; border-radius: 2px; background: {{accent}}; color: var(--ink); font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600; text-align: center">Melstacorp PLC<span style="display: block; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 11px; font-weight: 500; margin-top: 2px">LISTED HOLDING COMPANY · CSE</span></div>
 <span aria-hidden="true" style="width: 2px; height: 28px; background: var(--line3); display: block"></span>
 <div style="width: 100%; border-top: 2px solid var(--line3); padding-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px">
-<sc-for list="{{tree}}" as="g" hint-placeholder-count="10"><div style="display: flex; flex-direction: column; gap: 8px"><div style="padding: 12px 14px; border-radius: 2px; border: 1px solid var(--line2); border-top: 4px solid {{g.c}}; background: var(--surface); font-family: 'Inter Tight', sans-serif; font-size: 16px; font-weight: 600">{{g.name}}<span style="display: block; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 11px; font-weight: 500; color: var(--muted2); margin-top: 2px">{{g.count}}</span></div>
-<sc-for list="{{g.items}}" as="i" hint-placeholder-count="2"><button onClick="{{i.open}}" class="row" style="text-align: left; min-height: 44px; padding: 10px 12px; border-radius: 2px; border: 1px solid var(--line2); background: transparent; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14px; cursor: pointer">{{i.n}}</button></sc-for></div></sc-for>
+<sc-for list="{{tree}}" as="g" hint-placeholder-count="10"><div style="display: flex; flex-direction: column; gap: 8px"><div style="padding: 12px 14px; border-radius: 2px; border: 1px solid var(--line2); border-top: 4px solid {{g.c}}; background: var(--surface); font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 600">{{g.name}}<span style="display: block; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 11px; font-weight: 500; color: var(--muted2); margin-top: 2px">{{g.count}}</span></div>
+<sc-for list="{{g.items}}" as="i" hint-placeholder-count="2"><button onClick="{{i.open}}" class="row" style="text-align: left; min-height: 44px; padding: 10px 12px; border-radius: 2px; border: 1px solid var(--line2); background: transparent; color: var(--text); font-family: 'Jost', sans-serif; font-size: 14px; cursor: pointer">{{i.n}}</button></sc-for></div></sc-for>
 </div>
 </div>
 <p style="margin: 18px 0 0; display: inline-flex; gap: 8px; align-items: flex-start; font-size: 13px; color: var(--muted2); border: 1px dashed var(--line3); border-radius: 2px; padding: 10px 14px"><span aria-hidden="true">ⓘ</span><span>Simplified view by sector. Ownership percentages appear only once taken from approved financial disclosures (optional ownership-explorer module).</span></p>
@@ -375,21 +376,21 @@ h1,h2,h3{font-weight:500 !important}
 
 <section id="highlights" style="background: var(--bg2); border-top: 1px solid var(--line)">
 <div style="max-width: 1320px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px)">
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">BUSINESS HIGHLIGHTS</div>
-<h2 style="margin: 16px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(36px, 4.8vw, 62px); line-height: 1; letter-spacing: -0.04em">The Group in numbers</h2>
-<div style="margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px"><sc-for list="{{highlights}}" as="h" hint-placeholder-count="4"><a href="investors.html#highlights" class="lift" style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); padding: 24px; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted2)">{{h.k}}</span><span style="font-family: 'Inter Tight', sans-serif; font-size: 44px; font-weight: 600; letter-spacing: -0.04em; line-height: 1">{{h.v}}</span><span style="font-size: 14px; color: var(--muted)">{{h.l}}</span><span style="font-size: 13px; color: {{accentText}}">Source disclosure →</span></a></sc-for></div>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">BUSINESS HIGHLIGHTS</div>
+<h2 style="margin: 16px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(36px, 4.8vw, 62px); line-height: 1; letter-spacing: -0.04em">The Group in numbers</h2>
+<div style="margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px"><sc-for list="{{highlights}}" as="h" hint-placeholder-count="4"><a href="investors.html#highlights" class="lift" style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); padding: 24px; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted2)">{{h.k}}</span><span style="font-family: 'Jost', sans-serif; font-size: 44px; font-weight: 600; letter-spacing: -0.04em; line-height: 1">{{h.v}}</span><span style="font-size: 14px; color: var(--muted)">{{h.l}}</span><span style="font-size: 13px; color: {{accentText}}">Source disclosure →</span></a></sc-for></div>
 </div>
 </section>
 
 <section id="footprint" style="border-top: 1px solid var(--line)">
 <div style="max-width: 1320px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px)">
-<div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">FOOTPRINT</div>
-<h2 style="margin: 16px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(36px, 4.8vw, 62px); line-height: 1; letter-spacing: -0.04em">Rooted in Sri Lanka. <span style="color: {{accentText}}">Reaching beyond.</span></h2>
+<div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: var(--muted)">FOOTPRINT</div>
+<h2 style="margin: 16px 0 0; font-family: 'Jost', sans-serif; font-weight: 600; font-size: clamp(36px, 4.8vw, 62px); line-height: 1; letter-spacing: -0.04em">Rooted in Sri Lanka. <span style="color: {{accentText}}">Reaching beyond.</span></h2>
 <p style="margin: 16px 0 0; max-width: 640px; color: var(--muted)">Operations across Sri Lanka, with international hospitality, maritime and logistics activity through Aitken Spence.</p>
 <div class="rv" style="margin-top: 40px; border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); padding: clamp(20px, 3vw, 36px); overflow-x: auto">
-<div role="img" aria-label="Countries of operation placed by longitude, from South Africa in the west to Fiji in the east" style="position: relative; min-width: 760px; height: 190px"><span aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 95px; height: 2px; background: var(--line3); display: block"></span><sc-for list="{{fpDots}}" as="p" hint-placeholder-count="8"><span style="position: absolute; left: {{p.x}}; top: {{p.y}}; transform: translateX(-50%); display: flex; flex-direction: {{p.dir}}; align-items: center; gap: 6px; width: 120px; text-align: center"><span style="font-size: 14px; font-weight: 600">{{p.n}}</span><span style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 11px; color: var(--muted2)">{{p.lon}}</span></span><span style="position: absolute; left: {{p.x}}; top: 88px; width: {{p.s}}px; height: {{p.s}}px; margin-left: {{p.m}}px; margin-top: {{p.mt}}px; border-radius: 50%; background: {{p.c}}; box-shadow: 0 0 0 4px var(--surface); display: block"></span></sc-for></div>
+<div role="img" aria-label="Countries of operation placed by longitude, from South Africa in the west to Fiji in the east" style="position: relative; min-width: 760px; height: 190px"><span aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 95px; height: 2px; background: var(--line3); display: block"></span><sc-for list="{{fpDots}}" as="p" hint-placeholder-count="8"><span style="position: absolute; left: {{p.x}}; top: {{p.y}}; transform: translateX(-50%); display: flex; flex-direction: {{p.dir}}; align-items: center; gap: 6px; width: 120px; text-align: center"><span style="font-size: 14px; font-weight: 600">{{p.n}}</span><span style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 11px; color: var(--muted2)">{{p.lon}}</span></span><span style="position: absolute; left: {{p.x}}; top: 88px; width: {{p.s}}px; height: {{p.s}}px; margin-left: {{p.m}}px; margin-top: {{p.mt}}px; border-radius: 50%; background: {{p.c}}; box-shadow: 0 0 0 4px var(--surface); display: block"></span></sc-for></div>
 </div>
-<div style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px"><sc-for list="{{fpCards}}" as="p" hint-placeholder-count="8"><div style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); padding: 18px"><div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'Inter Tight', sans-serif; font-size: 19px; font-weight: 600">{{p.n}}</span><span style="width: 10px; height: 10px; border-radius: 50%; background: {{p.c}}"></span></div><div style="margin-top: 6px; font-size: 14px; color: var(--muted)">{{p.d}}</div></div></sc-for></div>
+<div style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px"><sc-for list="{{fpCards}}" as="p" hint-placeholder-count="8"><div style="border-radius: 2px; border: 1px solid var(--line2); background: var(--surface); padding: 18px"><div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'Jost', sans-serif; font-size: 19px; font-weight: 600">{{p.n}}</span><span style="width: 10px; height: 10px; border-radius: 50%; background: {{p.c}}"></span></div><div style="margin-top: 6px; font-size: 14px; color: var(--muted)">{{p.d}}</div></div></sc-for></div>
 <div style="margin-top: 20px"><a href="home.html#map" style="font-weight: 600">See every Sri Lankan location on the island map →</a></div>
 <p style="margin: 18px 0 0; display: inline-flex; gap: 8px; align-items: flex-start; font-size: 13px; color: var(--muted2); border: 1px dashed var(--line3); border-radius: 2px; padding: 10px 14px"><span aria-hidden="true">ⓘ</span><span>International presence per public sources on Aitken Spence; to be verified before publication.</span></p>
 </div>
@@ -400,10 +401,10 @@ h1,h2,h3{font-weight:500 !important}
 <button onClick="{{closeProf}}" aria-label="Close profile" style="position: absolute; inset: 0; border: 0; padding: 0; background: rgba(3,12,24,0.6); cursor: pointer"></button>
 <div class="dirpanel" style="position: relative; width: 100%; max-width: 520px; height: 100%; overflow: auto; background: var(--bg); border-left: 1px solid var(--line2)">
 <div class="{{p.vis}}" style="height: 200px; position: relative; display: block; border-bottom: 1px solid var(--line2)"><span style="position: absolute; left: 0; right: 0; top: 0; height: 5px; background: {{p.c}}; display: block"></span><button onClick="{{closeProf}}" aria-label="Close" style="position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(3,12,24,0.7); color: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></div>
-<div style="padding: 24px"><span style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; color: var(--muted2)">{{p.secName}}</span>
-<h3 style="margin: 8px 0 0; font-family: 'Inter Tight', sans-serif; font-size: 30px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.08">{{p.n}}</h3>
+<div style="padding: 24px"><span style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; color: var(--muted2)">{{p.secName}}</span>
+<h3 style="margin: 8px 0 0; font-family: 'Jost', sans-serif; font-size: 30px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.08">{{p.n}}</h3>
 <p style="margin: 14px 0 0; color: var(--text2)">{{p.desc}}</p>
-<dl style="margin: 22px 0 0; display: grid; grid-template-columns: 1fr 1.6fr; border-top: 1px solid var(--line2)"><sc-for list="{{p.rows}}" as="r" hint-placeholder-count="4"><dt style="padding: 12px 0; border-bottom: 1px solid var(--line2); font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted2)">{{r.k}}</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--line2); font-size: 15px">{{r.v}}</dd></sc-for></dl>
+<dl style="margin: 22px 0 0; display: grid; grid-template-columns: 1fr 1.6fr; border-top: 1px solid var(--line2)"><sc-for list="{{p.rows}}" as="r" hint-placeholder-count="4"><dt style="padding: 12px 0; border-bottom: 1px solid var(--line2); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted2)">{{r.k}}</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--line2); font-size: 15px">{{r.v}}</dd></sc-for></dl>
 <div style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px"><sc-if value="{{p.hasWeb}}" hint-placeholder-val="{{ true }}"><a dc-href="{{p.web}}" target="_blank" rel="noopener" style="min-height: 48px; display: inline-flex; align-items: center; padding: 0 20px; border-radius: 2px; background: {{accent}}; color: var(--ink); font-weight: 600; font-size: 15px">Visit website ↗</a></sc-if><a dc-href="{{p.mail}}" style="min-height: 48px; display: inline-flex; align-items: center; padding: 0 20px; border-radius: 2px; border: 1px solid var(--line3); font-size: 15px">Enquire via Melstacorp</a><a href="#sector" onClick="{{p.toSector}}" style="min-height: 48px; display: inline-flex; align-items: center; padding: 0 20px; border-radius: 2px; border: 1px solid var(--line3); font-size: 15px">{{p.secName}} sector →</a></div>
 </div>
 </div>
@@ -417,16 +418,16 @@ h1,h2,h3{font-weight:500 !important}
 <div class="gs" style="position: relative; width: 100%; max-width: 760px; max-height: 78vh; overflow: auto; border-radius: 2px; background: var(--bg); border: 1px solid var(--line2); box-shadow: 0 40px 80px -30px rgba(0,0,0,0.6)">
 <div style="display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-bottom: 1px solid var(--line2)">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
-<input type="search" autofocus value="{{gsQ}}" onInput="{{gsOnQ}}" placeholder="Search companies, reports, policies, news…" aria-label="Search the site" style="flex: 1; min-height: 48px; border: 0; outline: none; background: transparent; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 19px">
+<input type="search" autofocus value="{{gsQ}}" onInput="{{gsOnQ}}" placeholder="Search companies, reports, policies, news…" aria-label="Search the site" style="flex: 1; min-height: 48px; border: 0; outline: none; background: transparent; color: var(--text); font-family: 'Jost', sans-serif; font-size: 19px">
 <button onClick="{{gsClose}}" aria-label="Close" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line3); background: transparent; color: var(--text); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
 </div>
-<sc-if value="{{gsEmptyQ}}" hint-placeholder-val="{{ true }}"><div style="padding: 22px 20px"><div style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; color: var(--muted2)">TRY</div>
-<div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px"><sc-for list="{{gsHints}}" as="h" hint-placeholder-count="5"><button onClick="{{h.pick}}" style="min-height: 40px; padding: 0 16px; border-radius: 2px; border: 1px solid var(--line3); background: transparent; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14px; cursor: pointer">{{h.t}}</button></sc-for></div></div></sc-if>
+<sc-if value="{{gsEmptyQ}}" hint-placeholder-val="{{ true }}"><div style="padding: 22px 20px"><div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; color: var(--muted2)">TRY</div>
+<div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px"><sc-for list="{{gsHints}}" as="h" hint-placeholder-count="5"><button onClick="{{h.pick}}" style="min-height: 40px; padding: 0 16px; border-radius: 2px; border: 1px solid var(--line3); background: transparent; color: var(--text); font-family: 'Jost', sans-serif; font-size: 14px; cursor: pointer">{{h.t}}</button></sc-for></div></div></sc-if>
 <sc-for list="{{gsResults}}" as="r" hint-placeholder-count="5"><a dc-href="{{r.href}}" onClick="{{gsClose}}" class="row" style="min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 20px; border-bottom: 1px solid var(--line)">
 <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600; font-size: 16px">{{r.t}}</span><span style="font-size: 13px; color: var(--muted2)">{{r.sub}}</span></span>
-<span style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 11px; padding: 5px 10px; border-radius: 2px; background: var(--surface); border: 1px solid var(--line2); color: var(--text2); white-space: nowrap">{{r.type}}</span></a></sc-for>
+<span style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 11px; padding: 5px 10px; border-radius: 2px; background: var(--surface); border: 1px solid var(--line2); color: var(--text2); white-space: nowrap">{{r.type}}</span></a></sc-for>
 <sc-if value="{{gsNone}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding: 28px 20px; color: var(--muted)">No matches for “{{gsQ}}”. Try a company, report, policy or place.</p></sc-if>
-<div style="padding: 12px 20px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 11px; color: var(--muted3)">{{gsCount}}</div>
+<div style="padding: 12px 20px; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 11px; color: var(--muted3)">{{gsCount}}</div>
 </div>
 </div>
 </sc-if>
