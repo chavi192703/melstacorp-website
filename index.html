@@ -252,25 +252,23 @@ h1,h2{font-weight:300 !important}h3{font-weight:400 !important}
 .rv,.rv-img{animation-duration:.6s !important}
 .pat{display:none !important}
 .kh{position:relative;min-height:min(82vh,780px);background:#FFFFFF;overflow:hidden;display:flex;align-items:center}
-.kh-cv{position:absolute;inset:0;width:100%;height:100%;display:block}
+.kh-cv{position:absolute;inset:0;width:100%;height:100%;display:block;filter:blur(.9px)}
 .kh-in{position:relative;width:100%;max-width:1320px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px) clamp(80px,10vw,120px) clamp(20px,12vw,190px)}
-.kh-h{margin:0;font-family:'Jost',sans-serif;font-weight:300 !important;font-size:clamp(54px,9vw,140px);line-height:1;letter-spacing:-.02em;color:#0A2240}
-.kh-h>span{display:block}
-.kh-rot{display:grid !important}
-.kh-rot>span{grid-area:1/1;opacity:0;animation:khFade 12s ease-in-out infinite}
-.kh-rot>span:nth-child(2){animation-delay:3s}.kh-rot>span:nth-child(3){animation-delay:6s}.kh-rot>span:nth-child(4){animation-delay:9s}
-@keyframes khFade{0%{opacity:0}5%{opacity:1}20%{opacity:1}25%{opacity:0}100%{opacity:0}}
-.kh-bar{display:block;margin-top:30px;width:130px;height:3px;background:rgba(0,73,135,.15)}
-.kh-bar>span{display:block;height:100%;background:#004987;animation:khBar 3s linear infinite}
-@keyframes khBar{from{width:0}to{width:100%}}
-.kh-story{position:absolute;right:clamp(20px,12vw,250px);top:clamp(60px,12%,120px);width:clamp(150px,17vw,250px);aspect-ratio:1;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#FFFFFF !important;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.kh-h{margin:0;font-family:'Jost',sans-serif;font-weight:300 !important;font-size:clamp(46px,6.2vw,104px);line-height:1.04;letter-spacing:-.02em;color:#0A2240}
+.kh-h>span{display:block;opacity:0;animation:khIn 1.6s ease forwards}
+.kh-l1{animation-delay:2.1s !important}.kh-l2{animation-delay:3s !important}
+@keyframes khIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.kh-bar{display:block;margin-top:30px;width:120px;height:3px;background:#004987}
+.kh-cta{display:inline-flex;align-items:center;gap:10px;margin-top:30px;min-height:50px;padding:0 26px;background:#0A2240;color:#FFFFFF !important;font-size:14px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;opacity:0;animation:khIn 1.2s ease 3.6s forwards}
+.kh-cta:hover{background:#004987}
+.kh-story{position:absolute;right:clamp(20px,6vw,140px);top:clamp(48px,9%,96px);width:clamp(150px,17vw,250px);aspect-ratio:1;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#FFFFFF !important;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
 .kh-story .im{position:absolute;inset:0;transition:transform 1.2s ease}
 .kh-story-tint{position:absolute;inset:0;background:rgba(0,73,135,.78)}
 .kh-story-c{position:relative;display:flex;flex-direction:column;align-items:center;gap:12px;font-size:clamp(12px,1.1vw,16px);font-weight:500;letter-spacing:.04em;text-align:center}
 .kh-story:hover{transform:scale(1.04)}.kh-story:hover .im{transform:scale(1.12)}
 .kh-pause{position:absolute;right:clamp(20px,4vw,48px);bottom:28px;width:40px;height:40px;border-radius:50%;border:1px solid #A9B5C4;background:rgba(255,255,255,.85);color:#0A2240;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
 @media (max-width:760px){.kh{min-height:auto;flex-direction:column;align-items:stretch}.kh-in{padding:56px 20px 40px}.kh-story{position:relative;right:auto;top:auto;margin:0 20px 56px auto;width:150px}.kh-pause{bottom:16px}}
-@media (prefers-reduced-motion:reduce){.kh-rot>span,.kh-bar>span{animation:none !important}.kh-rot>span:first-child{opacity:1}.kh-bar>span{width:100%}}
+@media (prefers-reduced-motion:reduce){.kh-h>span,.kh-cta{animation:none !important;opacity:1}}
 .kcard{display:flex;flex-direction:column;border-top:3px solid var(--navy);padding:26px 4px 6px;gap:12px}
 .kcard:hover .kgo{border-bottom-color:var(--navy)}
 .knews .im{transition:transform .8s ease}.knews:hover .im{transform:scale(1.04)}
@@ -316,8 +314,9 @@ h1,h2{font-weight:300 !important}h3{font-weight:400 !important}
 <section id="top" class="kh">
 <canvas id="kh-cv" class="kh-cv" aria-hidden="true"></canvas>
 <div class="kh-in">
-<h1 class="kh-h" aria-label="Built on excellence, partnership, performance and responsibility."><span aria-hidden="true">Built on</span><span class="kh-rot" aria-hidden="true"><span>excellence</span><span>partnership</span><span>performance</span><span>responsibility</span></span></h1>
-<span class="kh-bar" aria-hidden="true"><span></span></span>
+<h1 class="kh-h"><span class="kh-l1">Pursue excellence.</span><span class="kh-l2">Make a difference.</span></h1>
+<span class="kh-bar" aria-hidden="true"></span>
+<a href="about.html" class="kh-cta">Explore Melstacorp <span aria-hidden="true">→</span></a>
 </div>
 <a href="about.html#history" class="kh-story"><span class="im im-div" aria-hidden="true"></span><span class="kh-story-tint" aria-hidden="true"></span><span class="kh-story-c"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"></path></svg><span>VIEW OUR STORY</span></span></a>
 <button class="kh-pause" onClick="{{toggleRib}}" aria-label="{{ribLabel}}" aria-pressed="{{ribPaused}}"><sc-if value="{{ribPlaying}}" hint-placeholder-val="{{ true }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"></path></svg></sc-if><sc-if value="{{ribPaused}}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"></path></svg></sc-if></button>
@@ -328,7 +327,7 @@ h1,h2{font-weight:300 !important}h3{font-weight:400 !important}
 <section id="about" style="border-bottom: 1px solid var(--line)">
 <div style="max-width: 1320px; margin: 0 auto; padding: clamp(80px, 10vw, 140px) clamp(20px, 4vw, 48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: end">
 <div style="grid-column: 1 / -1; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: var(--muted2)">WHO WE ARE</div>
-<p style="margin: 0; grid-column: 1 / -1; max-width: 1080px; font-family: 'Jost', sans-serif; font-weight: 400; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.18; letter-spacing: -0.025em">Melstacorp is a diversified, stable, public listed conglomerate. Through our Group companies we invest in businesses that serve households, industry and the nation, from beverages and tea to healthcare, clean power and hospitality.</p>
+<p style="margin: 0; grid-column: 1 / -1; max-width: 1080px; font-family: 'Jost', sans-serif; font-weight: 400; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.18; letter-spacing: -0.025em">We are a highly diversified, stable, public listed conglomerate. We constantly strive to add real value to all business sectors that we engage in.</p>
 <div><a href="about.html" style="min-height: 48px; display: inline-flex; align-items: center; gap: 10px; padding: 0 24px; background: var(--navy); color: #FFFFFF; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase">Learn about Melstacorp →</a></div>
 </div>
 </section>
@@ -933,45 +932,68 @@ class Component extends DCLogic {
       const bez = (P, t) => { const u = 1 - t;
         return [u*u*u*P[0][0] + 3*u*u*t*P[1][0] + 3*u*t*t*P[2][0] + t*t*t*P[3][0], u*u*u*P[0][1] + 3*u*u*t*P[1][1] + 3*u*t*t*P[2][1] + t*t*t*P[3][1],
           3*u*u*(P[1][0]-P[0][0]) + 6*u*t*(P[2][0]-P[1][0]) + 3*t*t*(P[3][0]-P[2][0]), 3*u*u*(P[1][1]-P[0][1]) + 6*u*t*(P[2][1]-P[1][1]) + 3*t*t*(P[3][1]-P[2][1])]; };
-      const mix = (a, b, k) => 'rgb(' + a.map((v, i) => Math.round(v + (b[i] - v) * k)).join(',') + ')';
-      const DARK = [227, 154, 16], LIGHT = [255, 232, 145];
+      const clamp = (v) => v < 0 ? 0 : v > 1 ? 1 : v;
+      const col = (D, L, k) => 'rgb(' + Math.round(D[0] + (L[0] - D[0]) * k) + ',' + Math.round(D[1] + (L[1] - D[1]) * k) + ',' + Math.round(D[2] + (L[2] - D[2]) * k) + ')';
+      // ribbons echo the four swooshes of the Melstacorp mark (drawn back to front)
+      const R = [
+        { P: [[-160, 880], [320, 920], [700, 700], [1500, 790]], w: 120, D: [32, 96, 34], L: [150, 214, 128], ph: 0.7, tw: 1.6, sp: 0.42, m: [26, 34] },
+        { P: [[-160, 720], [300, 830], [660, 560], [1500, 650]], w: 140, D: [0, 52, 104], L: [104, 172, 236], ph: 1.9, tw: 1.8, sp: 0.38, m: [34, 28] },
+        { P: [[-160, 640], [160, 720], [420, 900], [1000, 1060]], w: 110, D: [140, 14, 28], L: [244, 104, 112], ph: 2.6, tw: 2.1, sp: 0.46, m: [30, 26] },
+        { P: [[-200, 60], [300, 40], [300, 640], [1000, 1010]], w: 420, D: [214, 136, 8], L: [255, 240, 170], ph: 0.0, tw: 1.5, sp: 0.34, m: [44, 36] }
+      ];
       let clock = 0, last = 0;
       const frame = (now) => {
         const cv = document.getElementById('kh-cv');
         if (!cv) { setTimeout(() => window.requestAnimationFrame(frame), 300); return; }
         const dt = last ? Math.min(now - last, 60) : 16; last = now;
         if (!self._ribPaused && !reduce) clock += dt / 1000;
-        const dpr = Math.min(window.devicePixelRatio || 1, 2), W = cv.clientWidth, H = cv.clientHeight;
+        const dpr = 1, W = cv.clientWidth, H = cv.clientHeight;
+        if (!W || !H) { window.requestAnimationFrame(frame); return; }
         if (cv.width !== Math.round(W * dpr) || cv.height !== Math.round(H * dpr)) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); }
         const ctx = cv.getContext('2d'); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, cv.width, cv.height);
         const narrow = W < 760;
-        const sc = Math.max((narrow ? W * 1.25 : W * 0.66) / 1000, H / 800) * dpr;
-        ctx.setTransform(sc, 0, 0, sc, narrow ? -W * 0.08 * dpr : 0, (H * dpr - 800 * sc) / 2);
-        const c = clock;
-        const P = [[-140 + 14 * Math.sin(c * 0.21), 10], [280 + 40 * Math.sin(c * 0.33), 90 + 30 * Math.cos(c * 0.27)], [240 + 50 * Math.cos(c * 0.25), 640 + 30 * Math.sin(c * 0.31)], [900, 1060]];
-        const N = 34, M = 44, lines = [];
-        for (let k = 0; k <= N; k++) {
-          const f = k / N - 0.5, pts = [];
+        const sc = Math.max((narrow ? W * 1.3 : W * 0.78) / 1000, H / 900) * dpr;
+        ctx.setTransform(sc, 0, 0, sc, narrow ? -W * 0.1 * dpr : 0, (H * dpr - 900 * sc) / 2);
+        const t = clock, N = narrow ? 14 : 22;
+        for (const r of R) {
+          const M = narrow ? 60 : 110, a = r.m;
+          const P = [r.P[0], [r.P[1][0] + a[0] * Math.sin(t * r.sp + r.ph), r.P[1][1] + a[1] * Math.cos(t * r.sp * 0.8 + r.ph)],
+            [r.P[2][0] + a[0] * Math.cos(t * r.sp * 0.9 + r.ph * 1.3), r.P[2][1] + a[1] * Math.sin(t * r.sp * 0.7 + r.ph)], r.P[3]];
+          const C = [], NX = [], TH = [], WS = [];
           for (let i = 0; i <= M; i++) {
-            const s = i / M, b = bez(P, s), L = Math.hypot(b[2], b[3]) || 1, nx = -b[3] / L, ny = b[2] / L;
-            const w = 26 + 420 * Math.pow(s, 1.2) * (0.42 + 0.58 * Math.abs(Math.cos(Math.PI * (s * 1.15 + 0.18 + 0.06 * Math.sin(c * 0.4)))));
-            const g = f + 0.18 * Math.sin(Math.PI * 2 * s - c * 0.6 + f * 3) * (0.5 - Math.abs(f));
-            pts.push([b[0] + nx * w * g, b[1] + ny * w * g]);
+            const s = i / M, b = bez(P, s), L = Math.hypot(b[2], b[3]) || 1;
+            C.push([b[0], b[1]]); NX.push([-b[3] / L, b[2] / L]);
+            TH.push(r.tw * Math.PI * s + r.ph - t * 0.55);
+            WS.push(r.w * (0.22 + 0.78 * Math.pow(s, 0.75)));
           }
-          lines.push(pts);
-        }
-        for (let k = 0; k < N; k++) {
-          const light = 0.5 + 0.5 * Math.cos(2 * Math.PI * (k / N * 1.7 + 0.15 + c * 0.035));
-          ctx.fillStyle = mix(DARK, LIGHT, Math.pow(light, 1.3));
-          ctx.beginPath(); const A = lines[k], B = lines[k + 1];
-          ctx.moveTo(A[0][0], A[0][1]); for (let i = 1; i <= M; i++) ctx.lineTo(A[i][0], A[i][1]);
-          for (let i = M; i >= 0; i--) ctx.lineTo(B[i][0], B[i][1]);
-          ctx.closePath(); ctx.fill();
-        }
-        ctx.lineWidth = 1.1;
-        for (let k = 0; k <= N; k++) {
-          ctx.strokeStyle = k % 3 === 0 ? 'rgba(255,255,255,0.35)' : 'rgba(201,138,18,0.16)';
-          ctx.beginPath(); const A = lines[k]; ctx.moveTo(A[0][0], A[0][1]); for (let i = 1; i <= M; i++) ctx.lineTo(A[i][0], A[i][1]); ctx.stroke();
+          // body: full-width segments, shaded by how much each part faces the light
+          const pt = (i, f) => { const w = WS[i] * Math.cos(TH[i]); return [C[i][0] + NX[i][0] * w * f, C[i][1] + NX[i][1] * w * f]; };
+          for (let i = 0; i < M; i++) {
+            const th = (TH[i] + TH[i + 1]) / 2, st = Math.sin(th);
+            ctx.fillStyle = col(r.D, r.L, clamp(0.1 + (0.5 + 0.5 * st) * 0.66));
+            const a0 = pt(i, -0.5), a1 = pt(i + 1, -0.5), b1 = pt(i + 1, 0.5), b0 = pt(i, 0.5);
+            ctx.beginPath(); ctx.moveTo(a0[0], a0[1]); ctx.lineTo(a1[0], a1[1]); ctx.lineTo(b1[0], b1[1]); ctx.lineTo(b0[0], b0[1]); ctx.closePath();
+            ctx.fill(); ctx.strokeStyle = ctx.fillStyle; ctx.lineWidth = 0.8; ctx.stroke();
+          }
+          // satin sheen: a soft highlight band that slides across the surface as it turns
+          ctx.lineCap = 'butt';
+          for (const pass of [[0.34, 0.16], [0.12, 0.42]]) {
+            for (let i = 0; i < M; i++) {
+              const th = (TH[i] + TH[i + 1]) / 2, ct = Math.abs(Math.cos(th)), st = Math.sin(th);
+              const g = 0.3 * st, p0 = pt(i, g), p1 = pt(i + 1, g);
+              ctx.strokeStyle = 'rgba(' + r.L[0] + ',' + r.L[1] + ',' + r.L[2] + ',' + (pass[1] * ct * (0.6 + 0.4 * st)).toFixed(3) + ')';
+              ctx.lineWidth = Math.max(0.5, WS[i] * ct * pass[0]);
+              ctx.beginPath(); ctx.moveTo(p0[0], p0[1]); ctx.lineTo(p1[0], p1[1]); ctx.stroke();
+            }
+          }
+          // fine silk threads
+          ctx.lineWidth = 0.7;
+          for (let k = 1; k < N; k += 3) {
+            const f = k / N - 0.5; ctx.strokeStyle = 'rgba(255,255,255,0.18)';
+            ctx.beginPath(); const q0 = pt(0, f); ctx.moveTo(q0[0], q0[1]);
+            for (let i = 1; i <= M; i++) { const q = pt(i, f); ctx.lineTo(q[0], q[1]); }
+            ctx.stroke();
+          }
         }
         if (!reduce) window.requestAnimationFrame(frame);
       };
